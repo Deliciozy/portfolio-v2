@@ -1,8 +1,8 @@
 import Link from "next/link";
-import type { HomeProject } from "@/data/projects";
+import type { Project } from "@/data/projects";
 
 type ProjectRowProps = {
-  project: HomeProject;
+  project: Project;
 };
 
 export default function ProjectRow({
@@ -18,7 +18,9 @@ export default function ProjectRow({
 
       <div className="project-row__content">
         <div>
-          <p className="project-row__marker">///</p>
+          <p className="project-row__marker">
+            ///
+          </p>
 
           <h3 className="project-row__title">
             {project.title}
@@ -35,7 +37,9 @@ export default function ProjectRow({
             className="project-row__button"
           >
             View case
-            <span aria-hidden="true">→</span>
+            <span aria-hidden="true">
+              →
+            </span>
           </Link>
         </div>
       </div>
