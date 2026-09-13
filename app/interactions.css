@@ -1,0 +1,112 @@
+/* ========================================
+   HOMEPAGE INTERACTIONS
+   ======================================== */
+
+   html {
+    scroll-behavior: smooth;
+  }
+  
+  /* ========================================
+     SHARED INTERACTION BEHAVIOR
+     ======================================== */
+  
+  .site-nav__name,
+  .site-nav__links a,
+  .site-footer__links a,
+  .project-row__button,
+  .capability-card,
+  .review-card,
+  .project-row__image-placeholder {
+    transition:
+      opacity 180ms ease,
+      color 180ms ease,
+      border-color 180ms ease,
+      background-color 180ms ease,
+      transform 220ms cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  
+  /* ========================================
+     KEYBOARD FOCUS
+     ======================================== */
+  
+  .site-nav a:focus-visible,
+  .site-footer a:focus-visible,
+  .project-row__button:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 4px;
+  }
+  
+  /* ========================================
+     DESKTOP HOVER
+     ======================================== */
+  
+  @media (hover: hover) and (pointer: fine) {
+    .site-nav__links a:hover {
+      color: var(--accent);
+    }
+  
+    .site-nav__name:hover {
+      opacity: 0.72;
+    }
+  
+    .capability-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--accent);
+    }
+  
+    .project-row:hover .project-row__image-placeholder {
+      transform: scale(1.015);
+    }
+  
+    .project-row__button:hover {
+      transform: translateX(4px);
+    }
+  
+    .review-card:hover {
+      transform: translateY(-3px);
+    }
+  
+    .site-footer__links a:hover {
+      color: var(--accent);
+    }
+  }
+  
+  /* ========================================
+     TOUCH DEVICES
+     ======================================== */
+  
+  @media (hover: none) {
+    .capability-card,
+    .review-card,
+    .project-row__image-placeholder,
+    .project-row__button {
+      transform: none;
+    }
+  }
+  
+  /* ========================================
+     REDUCED MOTION
+     ======================================== */
+  
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  
+    .site-nav__name,
+    .site-nav__links a,
+    .site-footer__links a,
+    .project-row__button,
+    .capability-card,
+    .review-card,
+    .project-row__image-placeholder {
+      transition: none;
+    }
+  
+    .capability-card,
+    .review-card,
+    .project-row__image-placeholder,
+    .project-row__button {
+      transform: none;
+    }
+  }
