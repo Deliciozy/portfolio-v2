@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import Container from "@/components/layout/Container";
 
 export default function Navbar() {
@@ -5,14 +7,25 @@ export default function Navbar() {
     <header className="site-nav">
       <Container>
         <nav className="site-nav__inner">
-          <a href="/" className="site-nav__name">
+          <Link
+            href="/"
+            className="site-nav__name"
+          >
             Mary Chen
-          </a>
+          </Link>
 
           <div className="site-nav__links">
-            <a href="#work">Works</a>
-            <a href="#about">About me</a>
-            <a href="/resume.pdf">Resume</a>
+            <Link href="/#work">
+              Works
+            </Link>
+
+            <Link href="/about">
+              About me
+            </Link>
+
+            <Link href="/resume.pdf">
+              Resume
+            </Link>
           </div>
         </nav>
       </Container>

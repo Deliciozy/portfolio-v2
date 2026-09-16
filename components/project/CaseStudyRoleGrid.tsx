@@ -1,4 +1,10 @@
 import Container from "@/components/layout/Container";
+import Reveal from "@/components/motion/Reveal";
+
+import StaggerGroup, {
+  StaggerItem,
+} from "@/components/motion/StaggerGroup";
+
 import type { ProjectRoleItem } from "@/data/projects";
 
 type CaseStudyRoleGridProps = {
@@ -11,26 +17,33 @@ export default function CaseStudyRoleGrid({
   return (
     <section className="case-role">
       <Container>
-        <h2 className="case-section-title">
-          My Teams & My Role
-        </h2>
+        <Reveal distance={18}>
+          <h2 className="case-section-title">
+            My Teams & My Role
+          </h2>
+        </Reveal>
 
-        <div className="case-role__grid">
+        <StaggerGroup
+          className="case-role__grid"
+          stagger={0.08}
+        >
           {items.map((item) => (
-            <div
-              className="case-role__item"
+            <StaggerItem
               key={item.label}
+              distance={16}
             >
-              <p className="case-role__label">
-                {item.label}
-              </p>
+              <div className="case-role__item">
+                <p className="case-role__label">
+                  {item.label}
+                </p>
 
-              <p className="case-role__value">
-                {item.value}
-              </p>
-            </div>
+                <p className="case-role__value">
+                  {item.value}
+                </p>
+              </div>
+            </StaggerItem>
           ))}
-        </div>
+        </StaggerGroup>
       </Container>
     </section>
   );

@@ -1,6 +1,8 @@
 import Link from "next/link";
 
 import Container from "@/components/layout/Container";
+import Reveal from "@/components/motion/Reveal";
+
 import CaseStudyHero from "@/components/project/CaseStudyHero";
 import CaseStudyRoleGrid from "@/components/project/CaseStudyRoleGrid";
 import CaseStudyChapter from "@/components/project/CaseStudyChapter";
@@ -21,10 +23,6 @@ export default function ProjectCaseStudy({
 
   return (
     <main className="case-study">
-      {/* =================================
-          CASE STUDY NAV
-          ================================= */}
-
       <header className="case-nav">
         <Container>
           <nav className="case-nav__inner">
@@ -40,7 +38,7 @@ export default function ProjectCaseStudy({
                 Works
               </Link>
 
-              <Link href="/#about">
+              <Link href="/about">
                 About me
               </Link>
 
@@ -52,19 +50,16 @@ export default function ProjectCaseStudy({
         </Container>
       </header>
 
-      {/* =================================
-          HERO
-          ================================= */}
-
-      <CaseStudyHero project={project} />
-
-      {/* =================================
-          MAIN FEATURES
-          ================================= */}
+      <CaseStudyHero
+        project={project}
+      />
 
       <section className="case-feature">
         <Container>
-          <div className="case-feature__heading">
+          <Reveal
+            className="case-feature__heading"
+            distance={18}
+          >
             <p className="case-label">
               {caseStudy.mainFeature.label}
             </p>
@@ -76,36 +71,52 @@ export default function ProjectCaseStudy({
             <p className="case-feature__description">
               {caseStudy.mainFeature.description}
             </p>
-          </div>
+          </Reveal>
 
-          <figure className="case-feature__media">
-            <div className="case-media-placeholder">
-              {caseStudy.mainFeature.media.label}
-            </div>
+          <Reveal
+            delay={0.08}
+            distance={24}
+          >
+            <figure className="case-feature__media">
+              <div className="case-media-placeholder">
+                {caseStudy.mainFeature.media.label}
+              </div>
 
-            {caseStudy.mainFeature.media.caption && (
-              <figcaption className="case-caption">
-                {caseStudy.mainFeature.media.caption}
-              </figcaption>
-            )}
-          </figure>
+              {caseStudy.mainFeature.media.caption && (
+                <figcaption className="case-caption">
+                  {
+                    caseStudy.mainFeature
+                      .media.caption
+                  }
+                </figcaption>
+              )}
+            </figure>
+          </Reveal>
         </Container>
       </section>
 
-      {/* =================================
-          MEMORABLE MOMENT
-          ================================= */}
-
       <section className="case-moment">
         <Container>
-          <h2 className="case-section-title">
-            {caseStudy.memorableMoment.title}
-          </h2>
+          <Reveal distance={18}>
+            <h2 className="case-section-title">
+              {
+                caseStudy.memorableMoment
+                  .title
+              }
+            </h2>
+          </Reveal>
 
-          <div className="case-moment__content">
+          <Reveal
+            className="case-moment__content"
+            delay={0.06}
+            distance={20}
+          >
             {caseStudy.memorableMoment.highlight && (
               <p className="case-moment__highlight">
-                {caseStudy.memorableMoment.highlight}
+                {
+                  caseStudy.memorableMoment
+                    .highlight
+                }
               </p>
             )}
 
@@ -118,21 +129,13 @@ export default function ProjectCaseStudy({
                 )
               )}
             </div>
-          </div>
+          </Reveal>
         </Container>
       </section>
-
-      {/* =================================
-          ROLE GRID
-          ================================= */}
 
       <CaseStudyRoleGrid
         items={caseStudy.roleItems}
       />
-
-      {/* =================================
-          CHAPTERS
-          ================================= */}
 
       <div className="case-study__chapters">
         {caseStudy.chapters.map(
@@ -145,38 +148,32 @@ export default function ProjectCaseStudy({
         )}
       </div>
 
-      {/* =================================
-          IMPACT
-          ================================= */}
-
       <CaseStudyMetricGrid
         title={caseStudy.impact.title}
         body={caseStudy.impact.body}
         metrics={caseStudy.impact.metrics}
       />
 
-      {/* =================================
-          NEXT PROJECT
-          ================================= */}
-
       <section className="case-next">
         <Container>
-          <p className="case-label">
-            // Next Project //
-          </p>
+          <Reveal distance={18}>
+            <p className="case-label">
+              // Next Project //
+            </p>
 
-          <Link
-            href={`/projects/${nextProject.slug}`}
-            className="case-next__link"
-          >
-            <span>
-              {nextProject.title}
-            </span>
+            <Link
+              href={`/projects/${nextProject.slug}`}
+              className="case-next__link"
+            >
+              <span>
+                {nextProject.title}
+              </span>
 
-            <span aria-hidden="true">
-              →
-            </span>
-          </Link>
+              <span aria-hidden="true">
+                →
+              </span>
+            </Link>
+          </Reveal>
         </Container>
       </section>
     </main>

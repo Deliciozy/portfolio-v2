@@ -1,4 +1,10 @@
 import Container from "@/components/layout/Container";
+import Reveal from "@/components/motion/Reveal";
+
+import StaggerGroup, {
+  StaggerItem,
+} from "@/components/motion/StaggerGroup";
+
 import type { ProjectMetric } from "@/data/projects";
 
 type CaseStudyMetricGridProps = {
@@ -16,7 +22,10 @@ export default function CaseStudyMetricGrid({
     <section className="case-impact">
       <Container>
         <div className="case-impact__grid">
-          <div className="case-impact__text">
+          <Reveal
+            className="case-impact__text"
+            distance={20}
+          >
             <h2 className="case-section-title">
               {title}
             </h2>
@@ -30,24 +39,29 @@ export default function CaseStudyMetricGrid({
                 )
               )}
             </div>
-          </div>
+          </Reveal>
 
-          <div className="case-impact__metrics">
+          <StaggerGroup
+            className="case-impact__metrics"
+            stagger={0.1}
+          >
             {metrics.map((metric) => (
-              <div
-                className="case-impact__metric"
+              <StaggerItem
                 key={metric.label}
+                distance={18}
               >
-                <strong>
-                  {metric.value}
-                </strong>
+                <div className="case-impact__metric">
+                  <strong>
+                    {metric.value}
+                  </strong>
 
-                <span>
-                  {metric.label}
-                </span>
-              </div>
+                  <span>
+                    {metric.label}
+                  </span>
+                </div>
+              </StaggerItem>
             ))}
-          </div>
+          </StaggerGroup>
         </div>
       </Container>
     </section>

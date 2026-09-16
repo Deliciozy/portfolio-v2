@@ -1,4 +1,6 @@
 import Container from "@/components/layout/Container";
+import Reveal from "@/components/motion/Reveal";
+
 import type { StorySection } from "@/data/projects";
 
 type CaseStudyStorySectionProps = {
@@ -18,12 +20,17 @@ export default function CaseStudyStorySection({
       data-layout={section.layout}
     >
       <Container>
-        <p className="case-story__section-label">
-          {section.sectionLabel}
-        </p>
+        <Reveal distance={14}>
+          <p className="case-story__section-label">
+            {section.sectionLabel}
+          </p>
+        </Reveal>
 
         <div className="case-story__grid">
-          <div className="case-story__text">
+          <Reveal
+            className="case-story__text"
+            distance={20}
+          >
             {section.tags &&
               section.tags.length > 0 && (
                 <div className="case-story__tags">
@@ -56,10 +63,14 @@ export default function CaseStudyStorySection({
                 {section.highlight}
               </blockquote>
             )}
-          </div>
+          </Reveal>
 
           {hasMedia && (
-            <div className="case-story__media">
+            <Reveal
+              className="case-story__media"
+              delay={0.1}
+              distance={24}
+            >
               {section.media?.map(
                 (media) => (
                   <figure
@@ -78,7 +89,7 @@ export default function CaseStudyStorySection({
                   </figure>
                 )
               )}
-            </div>
+            </Reveal>
           )}
         </div>
       </Container>

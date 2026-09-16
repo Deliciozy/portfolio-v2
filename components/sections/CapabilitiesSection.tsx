@@ -3,35 +3,48 @@ import Section from "@/components/layout/Section";
 import CapabilityCard from "@/components/ui/CapabilityCard";
 import Reveal from "@/components/motion/Reveal";
 
+type CapabilitiesSectionProps = {
+  title?: string;
+  kicker?: string;
+  className?: string;
+};
+
 const capabilities = [
   {
     icon: "⚓",
     title: "Captain",
-    subtitle: "Turning separated groups into stronger teams.",
+    subtitle:
+      "Turning separated groups into stronger teams.",
     description:
-      "I naturally step up when a team needs direction. My system-oriented mindset allows me to design structures that keep collaboration efficient and push the whole team toward its goals.",
+      "I naturally step up when a team needs direction. Taking ownership beyond my role, I align peers, interns, and collaborators around clear goals and keep progress moving forward.",
   },
   {
     icon: "◈",
     title: "Guardian",
-    subtitle: "Raising the bar through responsibility and detail.",
+    subtitle:
+      "Raising the bar through responsibility and detail.",
     description:
-      "I'm known for taking full responsibility and holding myself to high standards. I can always notice the small details other people miss, ensuring quality in every delivery.",
+      "I'm known for taking full responsibility and holding myself to high standards. I catch the small details others miss, ensuring quality in every delivery.",
   },
   {
     icon: "⌕",
     title: "Explorer",
-    subtitle: "Openness as a path to stronger design.",
+    subtitle:
+      "Openness as a path to stronger design.",
     description:
-      "I embrace every opportunity to learn, treating both praise and critique as fuel for growth. I'm curious about how others think, seeking different perspectives to complement my own.",
+      "I embrace every opportunity to learn, treating both praise and critique as fuel for growth. Curiosity drives me to understand how others think and seek perspectives beyond my own.",
   },
 ];
 
-export default function CapabilitiesSection() {
+export default function CapabilitiesSection({
+  title = "Capabilities",
+  kicker = "// 01 //",
+  className = "",
+}: CapabilitiesSectionProps) {
   return (
     <Section
       size="sm"
-      className="capabilities"
+      className={`capabilities ${className}`}
     >
       <Container>
         <Reveal
@@ -39,11 +52,11 @@ export default function CapabilitiesSection() {
           distance={18}
         >
           <p className="section-kicker">
-            // 01 //
+            {kicker}
           </p>
 
           <h2 className="section-title">
-            Capabilities
+            {title}
           </h2>
         </Reveal>
 

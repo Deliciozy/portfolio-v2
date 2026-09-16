@@ -1,0 +1,171 @@
+/* ========================================
+   ABOUT HERO
+   ======================================== */
+
+   .about-hero {
+    padding-top: 72px;
+    padding-bottom: var(--section-sm);
+  }
+  
+  .about-hero__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+  
+  .about-hero__content {
+    min-width: 0;
+  }
+  
+  .about-hero__title {
+    max-width: 12ch;
+  
+    font-size: var(--text-h2);
+    font-weight: var(--weight-semibold);
+    line-height: var(--leading-heading);
+    letter-spacing: var(--tracking-heading);
+  }
+  
+  .about-hero__subtitle {
+    margin-top: 14px;
+  
+    color: var(--accent);
+  
+    font-size: var(--text-body);
+    font-weight: var(--weight-medium);
+  }
+  
+  .about-hero__body {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  
+    max-width: 60ch;
+  
+    margin-top: 12px;
+  
+    color: var(--foreground);
+  }
+  
+  .about-hero__image-placeholder {
+    display: grid;
+    place-items: center;
+  
+    width: 100%;
+    aspect-ratio: 4 / 3;
+  
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+  
+    background: var(--surface-soft);
+  
+    color: var(--muted);
+  
+    font-size: var(--text-small);
+  }
+  
+  /* ========================================
+     INTERESTS
+     ======================================== */
+  
+  .interests__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+  
+    gap: var(--gap-md);
+  }
+  
+  .interest-card {
+    height: 100%;
+  
+    overflow: hidden;
+  
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+  
+    background: var(--surface);
+  }
+  
+  .interest-card__media {
+    display: grid;
+    place-items: center;
+  
+    width: 100%;
+    aspect-ratio: 4 / 3;
+  
+    background: var(--surface-soft);
+  
+    color: var(--muted);
+  
+    font-size: var(--text-small);
+  }
+  
+  .interest-card__content {
+    padding: 18px;
+  }
+  
+  .interest-card__title {
+    font-size: var(--text-h3);
+    font-weight: var(--weight-medium);
+    line-height: var(--leading-heading);
+  }
+  
+  .interest-card__description {
+    margin-top: 10px;
+  
+    color: var(--muted);
+  
+    font-size: var(--text-body);
+  }
+  
+  /* ========================================
+     TABLET
+     ======================================== */
+  
+  @media (min-width: 768px) {
+    .about-hero {
+      padding-top: 96px;
+    }
+  
+    .about-hero__grid {
+      grid-template-columns:
+        minmax(0, 1.2fr)
+        minmax(260px, 0.8fr);
+  
+      align-items: center;
+  
+      gap: 56px;
+    }
+  
+    .interests__grid {
+      grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+    }
+  }
+  
+  /* ========================================
+     DESKTOP
+     ======================================== */
+  
+  @media (min-width: 1200px) {
+    .about-hero {
+      padding-top: 120px;
+    }
+  
+    .about-hero__grid {
+      grid-template-columns:
+        minmax(0, 1.35fr)
+        minmax(340px, 0.65fr);
+  
+      gap: 96px;
+    }
+  
+    .interests__grid {
+      grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+    }
+  
+    .interest-card__content {
+      padding: 22px;
+    }
+  }

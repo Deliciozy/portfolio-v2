@@ -1,11 +1,10 @@
+import Link from "next/link";
+
 import Container from "@/components/layout/Container";
 
 export default function Footer() {
   return (
-    <footer
-      id="about"
-      className="site-footer"
-    >
+    <footer className="site-footer">
       <Container>
         <div className="site-footer__inner">
           <div>
@@ -22,17 +21,17 @@ export default function Footer() {
             className="site-footer__links"
             aria-label="Footer navigation"
           >
-            <a href="#work">
+            <Link href="/#work">
               Works
-            </a>
+            </Link>
 
-            <a href="#about">
+            <Link href="/about">
               About me
-            </a>
+            </Link>
 
-            <a href="/resume.pdf">
+            <Link href="/resume.pdf">
               Resume
-            </a>
+            </Link>
           </nav>
         </div>
       </Container>
