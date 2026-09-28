@@ -1,26 +1,21 @@
 import Navbar from "@/components/ui/Navbar";
-import Footer from "@/components/ui/Footer";
 
 import AboutHero from "@/components/sections/AboutHero";
-import CapabilitiesSection from "@/components/sections/CapabilitiesSection";
+
+import AboutCapabilitiesSection from "@/components/sections/AboutCapabilitiesSection";
+
 import InterestsSection from "@/components/sections/InterestsSection";
 
 export default function AboutPage() {
   return (
-    <main>
+    <main className="about-page">
       <Navbar />
 
       <AboutHero />
 
-      <CapabilitiesSection
-        title="What Shapes Me"
-        kicker="// 01 //"
-        className="about-capabilities"
-      />
+      <AboutCapabilitiesSection />
 
       <InterestsSection />
-
-      <Footer />
     </main>
   );
 }

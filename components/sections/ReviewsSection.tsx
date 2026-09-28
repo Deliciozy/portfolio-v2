@@ -1,91 +1,98 @@
-import Container from "@/components/layout/Container";
-import Section from "@/components/layout/Section";
-import ReviewCard from "@/components/ui/ReviewCard";
+import Image from "next/image";
+
 import Reveal from "@/components/motion/Reveal";
 
-import StaggerGroup, {
-  StaggerItem,
-} from "@/components/motion/StaggerGroup";
+import ReviewCard from "@/components/ui/ReviewCard";
+import SectionHeading from "@/components/ui/SectionHeading";
 
-import { reviews } from "@/data/reviews";
+import {
+  reviews,
+} from "@/data/reviews";
 
 export default function ReviewsSection() {
-  const leftReviews =
-    reviews.slice(0, 2);
-
-  const rightReviews =
-    reviews.slice(2, 4);
-
   return (
-    <Section
-      size="sm"
-      className="reviews-section"
-    >
-      <Container>
-        <Reveal
-          className="section-heading"
-          distance={18}
-        >
-          <p className="section-kicker">
-            // 05 //
-          </p>
+    <section className="home-reviews">
+      <div className="home-section-container">
+        <SectionHeading
+          index="05"
+          title="Reviews"
+        />
 
-          <h2 className="section-title">
-            Reviews
-          </h2>
-        </Reveal>
+        <div className="home-reviews__layout">
+          <Reveal
+            className="home-team"
+            distance={60}
+          >
+            <div className="home-team__image-wrap">
+              <Image
+                src="/images/home/team.png"
+                alt="Mary Chen with her team"
+                fill
+                sizes="
+                  (min-width: 1200px) 397px,
+                  (min-width: 810px) 370px,
+                  351px
+                "
+                className="home-team__image"
+              />
+            </div>
 
-        <div className="reviews-layout">
-          <div className="reviews-team">
-            <Reveal distance={20}>
-              <div className="reviews-team__placeholder">
-                Team Image
-              </div>
+            <div className="home-team__label">
+              My Team
+            </div>
+          </Reveal>
 
-              <span className="reviews-team__label">
-                My Team
-              </span>
-            </Reveal>
+          <div className="home-reviews__cards">
+            <div className="home-reviews__left">
+              <Reveal
+                className="home-review-wrap home-review-wrap--long"
+                distance={60}
+              >
+                <ReviewCard
+                  review={
+                    reviews[0]
+                  }
+                />
+              </Reveal>
+
+              <Reveal
+                className="home-review-wrap home-review-wrap--short"
+                distance={60}
+              >
+                <ReviewCard
+                  review={
+                    reviews[1]
+                  }
+                />
+              </Reveal>
+            </div>
+
+            <div className="home-reviews__right">
+              <Reveal
+                className="home-review-wrap home-review-wrap--short"
+                distance={60}
+              >
+                <ReviewCard
+                  review={
+                    reviews[2]
+                  }
+                />
+              </Reveal>
+
+              <Reveal
+                className="home-review-wrap home-review-wrap--long"
+                distance={60}
+              >
+                <ReviewCard
+                  review={
+                    reviews[3]
+                  }
+                />
+              </Reveal>
+            </div>
           </div>
-
-          <StaggerGroup
-            className="reviews-column"
-            stagger={0.1}
-          >
-            {leftReviews.map(
-              (review) => (
-                <StaggerItem
-                  key={review.name}
-                  distance={18}
-                >
-                  <ReviewCard
-                    review={review}
-                  />
-                </StaggerItem>
-              )
-            )}
-          </StaggerGroup>
-
-          <StaggerGroup
-            className="reviews-column"
-            stagger={0.1}
-            delay={0.08}
-          >
-            {rightReviews.map(
-              (review) => (
-                <StaggerItem
-                  key={review.name}
-                  distance={18}
-                >
-                  <ReviewCard
-                    review={review}
-                  />
-                </StaggerItem>
-              )
-            )}
-          </StaggerGroup>
         </div>
-      </Container>
-    </Section>
+      </div>
+    </section>
   );
 }

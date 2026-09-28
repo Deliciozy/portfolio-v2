@@ -1,34 +1,33 @@
 import Link from "next/link";
 
-import Container from "@/components/layout/Container";
-
 export default function Navbar() {
   return (
     <header className="site-nav">
-      <Container>
-        <nav className="site-nav__inner">
-          <Link
-            href="/"
-            className="site-nav__name"
-          >
-            Mary Chen
+      <div className="site-nav__frame">
+        <Link
+          href="/"
+          className="site-nav__brand"
+        >
+          Mary Chen
+        </Link>
+
+        <nav
+          className="site-nav__links"
+          aria-label="Primary navigation"
+        >
+          <Link href="/#work">
+            Works
           </Link>
 
-          <div className="site-nav__links">
-            <Link href="/#work">
-              Works
-            </Link>
+          <Link href="/about">
+            About me
+          </Link>
 
-            <Link href="/about">
-              About me
-            </Link>
-
-            <Link href="/resume.pdf">
-              Resume
-            </Link>
-          </div>
+          <Link href="/resume">
+            Resume
+          </Link>
         </nav>
-      </Container>
+      </div>
     </header>
   );
 }

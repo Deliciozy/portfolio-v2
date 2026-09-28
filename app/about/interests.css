@@ -1,0 +1,427 @@
+/* ========================================
+   ABOUT — INTERESTS
+
+   Project-card-aligned version
+
+   The home project cards use a very small
+   inner inset. We use the same visual logic
+   here:
+
+   image top   = 5px
+   image left  = 5px
+   image right = 5px
+
+   title left  = 5px
+   body left   = 5px
+   body right  = 5px
+
+   Card height is content-driven.
+   ======================================== */
+
+
+   .interests-section {
+    --interest-inset: 5px;
+  
+    background: #080808;
+  }
+  
+  
+  /* ========================================
+     HEADING
+     ======================================== */
+  
+  .interests-heading {
+    display: flex;
+  
+    flex-direction: column;
+  
+    gap: 28px;
+  
+    margin-bottom: 64px;
+  }
+  
+  
+  .interests-index {
+    display: flex;
+  
+    align-items: center;
+  
+    gap: 4px;
+  
+    height: 25px;
+  
+    font-family:
+      var(--font-inter),
+      Arial,
+      sans-serif;
+  
+    font-size: 20.8px;
+  
+    font-weight: 600;
+  
+    line-height: 24.96px;
+  
+    letter-spacing: -0.5px;
+  }
+  
+  
+  .interests-index__slash {
+    color: var(--accent);
+  }
+  
+  
+  .interests-index__number {
+    color: #fafafa;
+  }
+  
+  
+  .interests-title {
+    margin: 0;
+  
+    color: #fafafa;
+  
+    font-family:
+      var(--font-display),
+      Arial,
+      sans-serif;
+  
+    font-size: 70px;
+  
+    font-weight: 600;
+  
+    line-height: 77px;
+  
+    letter-spacing: -3.5px;
+  }
+  
+  
+  /* ========================================
+     GRID
+     ======================================== */
+  
+  .interests-grid {
+    display: grid;
+  
+    grid-template-columns:
+      repeat(
+        3,
+        minmax(0, 1fr)
+      );
+  
+    align-items: start;
+  
+    gap: 9px;
+  
+    width: 100%;
+  }
+  
+  
+  /* ========================================
+     CARD
+     ======================================== */
+  
+  .interest-card {
+    display: flex !important;
+  
+    flex-direction: column;
+  
+    align-self: start;
+  
+    width: 100%;
+  
+    height: auto !important;
+  
+    min-height: 0 !important;
+  
+    overflow: hidden;
+  
+    box-sizing: border-box;
+  
+    border:
+      1px solid
+      rgba(
+        255,
+        255,
+        255,
+        0.055
+      );
+  
+    border-radius: 12px;
+  
+    background: #17191d;
+  }
+  
+  
+  /* ========================================
+     IMAGE AREA
+  
+     Same inset logic as the project cards.
+     ======================================== */
+  
+  .interest-card__media {
+    width: 100%;
+  
+    box-sizing: border-box;
+  
+    padding:
+      var(--interest-inset)
+      var(--interest-inset)
+      0;
+  
+    overflow: hidden;
+  }
+  
+  
+  .interest-card__image-frame {
+    position: relative;
+  
+    width: 100%;
+  
+    /*
+     * Original Framer image proportion:
+     * approximately 322 × 341.
+     */
+    aspect-ratio: 322 / 341;
+  
+    overflow: hidden;
+  
+    border-radius: 10px;
+  
+    background: #101114;
+  }
+  
+  
+  .interest-card__image {
+    display: block;
+  
+    width: 100%;
+  
+    height: 100%;
+  
+    object-fit: cover;
+  
+    object-position: center;
+  
+    /*
+     * Very small enlargement:
+     * removes edge looseness and creates
+     * the cropped / filled appearance
+     * requested.
+     */
+    transform: scale(1.015);
+  
+    transform-origin: center;
+  }
+  
+  
+  /* ========================================
+     TEXT
+  
+     Horizontal inset intentionally matches
+     the image inset exactly.
+     ======================================== */
+  
+  .interest-card__content {
+    display: flex;
+  
+    flex-direction: column;
+  
+    gap: 10px;
+  
+    width: 100%;
+  
+    box-sizing: border-box;
+  
+    /*
+     * Top spacing remains comfortable.
+     *
+     * Left/right = exactly same as image:
+     * 5px.
+     *
+     * Bottom stays generous so the existing
+     * last-line-to-card-bottom relationship
+     * remains visually intact.
+     */
+    padding:
+      20px
+      var(--interest-inset)
+      22px;
+  }
+  
+  
+  .interest-card__title {
+    width: 100%;
+  
+    margin: 0;
+  
+    color: #fafafa;
+  
+    font-family:
+      var(--font-inter),
+      Arial,
+      sans-serif;
+  
+    font-size: 24px;
+  
+    font-weight: 600;
+  
+    line-height: 28.8px;
+  
+    letter-spacing: 0;
+  }
+  
+  
+  .interest-card__description {
+    width: 100%;
+  
+    margin: 0;
+  
+    color:
+      rgba(
+        255,
+        255,
+        255,
+        0.6
+      );
+  
+    font-family:
+      var(--font-inter),
+      Arial,
+      sans-serif;
+  
+    font-size: 20px;
+  
+    font-weight: 400;
+  
+    line-height: 24px;
+  
+    letter-spacing: 0;
+  
+    overflow-wrap: break-word;
+  }
+  
+  
+  /* ========================================
+     TABLET — 810–1199
+     ======================================== */
+  
+  @media (
+    min-width: 810px
+  ) and (
+    max-width: 1199px
+  ) {
+  
+    .interests-heading {
+      gap: 24px;
+  
+      margin-bottom: 52px;
+    }
+  
+  
+    .interests-title {
+      font-size: 55px;
+  
+      line-height: 60.5px;
+  
+      letter-spacing:
+        -2.75px;
+    }
+  
+  
+    .interests-grid {
+      grid-template-columns:
+        repeat(
+          2,
+          minmax(0, 1fr)
+        );
+  
+      gap: 9px;
+    }
+  
+  
+    .interest-card__content {
+      padding:
+        18px
+        var(--interest-inset)
+        22px;
+    }
+  
+  
+    .interest-card__title {
+      font-size: 22px;
+  
+      line-height: 26.4px;
+    }
+  
+  
+    .interest-card__description {
+      font-size: 18px;
+  
+      line-height: 23.4px;
+    }
+  
+  }
+  
+  
+  /* ========================================
+     MOBILE — <=809
+     ======================================== */
+  
+  @media (
+    max-width: 809px
+  ) {
+  
+    .interests-heading {
+      gap: 20px;
+  
+      margin-bottom: 36px;
+    }
+  
+  
+    .interests-index {
+      font-size: 20.8px;
+  
+      line-height: 24.96px;
+    }
+  
+  
+    .interests-title {
+      font-size: 44.8px;
+  
+      line-height: 49.28px;
+  
+      letter-spacing:
+        -2px;
+    }
+  
+  
+    .interests-grid {
+      grid-template-columns:
+        1fr;
+  
+      gap: 10px;
+    }
+  
+  
+    .interest-card__content {
+      padding:
+        18px
+        var(--interest-inset)
+        22px;
+    }
+  
+  
+    .interest-card__title {
+      font-size: 22px;
+  
+      line-height: 26.4px;
+    }
+  
+  
+    .interest-card__description {
+      font-size: 18px;
+  
+      line-height: 23.4px;
+    }
+  
+  }

@@ -1,112 +1,116 @@
+html {
+  scroll-behavior: smooth;
+}
+
 /* ========================================
-   HOMEPAGE INTERACTIONS
+   CUSTOM CURSOR
    ======================================== */
 
-   html {
-    scroll-behavior: smooth;
+.custom-cursor {
+  --cursor-x: 0px;
+  --cursor-y: 0px;
+
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  z-index: 10000;
+
+  width: 6px;
+  height: 6px;
+
+  border-radius: 50%;
+
+  background: #ffffff;
+
+  opacity: 0;
+
+  pointer-events: none;
+
+  transform:
+    translate3d(
+      var(--cursor-x),
+      var(--cursor-y),
+      0
+    )
+    translate(
+      -50%,
+      -50%
+    );
+
+  transition:
+    opacity
+    120ms
+    ease;
+}
+
+.custom-cursor--visible {
+  opacity: 1;
+}
+
+@media (
+  hover: hover
+) and (
+  pointer: fine
+) {
+  .has-custom-cursor,
+  .has-custom-cursor body,
+  .has-custom-cursor a,
+  .has-custom-cursor button {
+    cursor: none;
   }
-  
-  /* ========================================
-     SHARED INTERACTION BEHAVIOR
-     ======================================== */
-  
-  .site-nav__name,
+
+  .site-nav__brand,
   .site-nav__links a,
-  .site-footer__links a,
-  .project-row__button,
-  .capability-card,
-  .review-card,
-  .project-row__image-placeholder {
+  .home-project__button {
     transition:
-      opacity 180ms ease,
-      color 180ms ease,
-      border-color 180ms ease,
-      background-color 180ms ease,
-      transform 220ms cubic-bezier(0.16, 1, 0.3, 1);
+      opacity 160ms ease,
+      color 160ms ease,
+      background-color 160ms ease;
   }
-  
-  /* ========================================
-     KEYBOARD FOCUS
-     ======================================== */
-  
-  .site-nav a:focus-visible,
-  .site-footer a:focus-visible,
-  .project-row__button:focus-visible {
-    outline: 2px solid var(--accent);
-    outline-offset: 4px;
+
+  .site-nav__brand:hover {
+    opacity: 0.76;
   }
-  
-  /* ========================================
-     DESKTOP HOVER
-     ======================================== */
-  
-  @media (hover: hover) and (pointer: fine) {
-    .site-nav__links a:hover {
-      color: var(--accent);
-    }
-  
-    .site-nav__name:hover {
-      opacity: 0.72;
-    }
-  
-    .capability-card:hover {
-      transform: translateY(-4px);
-      border-color: var(--accent);
-    }
-  
-    .project-row:hover .project-row__image-placeholder {
-      transform: scale(1.015);
-    }
-  
-    .project-row__button:hover {
-      transform: translateX(4px);
-    }
-  
-    .review-card:hover {
-      transform: translateY(-3px);
-    }
-  
-    .site-footer__links a:hover {
-      color: var(--accent);
-    }
+
+  .site-nav__links a:hover {
+    color:
+      var(--orange-button);
   }
-  
-  /* ========================================
-     TOUCH DEVICES
-     ======================================== */
-  
-  @media (hover: none) {
-    .capability-card,
-    .review-card,
-    .project-row__image-placeholder,
-    .project-row__button {
-      transform: none;
-    }
+
+  .home-project__button:hover {
+    background: #ff5a3d;
   }
-  
-  /* ========================================
-     REDUCED MOTION
-     ======================================== */
-  
-  @media (prefers-reduced-motion: reduce) {
-    html {
-      scroll-behavior: auto;
-    }
-  
-    .site-nav__name,
-    .site-nav__links a,
-    .site-footer__links a,
-    .project-row__button,
-    .capability-card,
-    .review-card,
-    .project-row__image-placeholder {
-      transition: none;
-    }
-  
-    .capability-card,
-    .review-card,
-    .project-row__image-placeholder,
-    .project-row__button {
-      transform: none;
-    }
+}
+
+.site-nav a:focus-visible,
+.home-project__button:focus-visible {
+  outline:
+    2px
+    solid
+    var(--orange-button);
+
+  outline-offset: 4px;
+}
+
+@media (
+  hover: none
+) {
+  .custom-cursor {
+    display: none;
   }
+}
+
+@media (
+  prefers-reduced-motion:
+    reduce
+) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .home-hero__logo-track {
+    animation: none !important;
+  }
+}

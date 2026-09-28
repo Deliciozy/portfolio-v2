@@ -1,80 +1,76 @@
-import Container from "@/components/layout/Container";
-import Section from "@/components/layout/Section";
-import CapabilityCard from "@/components/ui/CapabilityCard";
-import Reveal from "@/components/motion/Reveal";
+import StaggerGroup, {
+  StaggerItem,
+} from "@/components/motion/StaggerGroup";
 
-type CapabilitiesSectionProps = {
-  title?: string;
-  kicker?: string;
-  className?: string;
-};
+import CapabilityCard from "@/components/ui/CapabilityCard";
+import SectionHeading from "@/components/ui/SectionHeading";
 
 const capabilities = [
   {
-    icon: "⚓",
+    icon: "captain" as const,
+
     title: "Captain",
+
     subtitle:
       "Turning separated groups into stronger teams.",
+
     description:
-      "I naturally step up when a team needs direction. Taking ownership beyond my role, I align peers, interns, and collaborators around clear goals and keep progress moving forward.",
+      "I naturally step up when a team needs direction. My system-oriented mindset allows me to design structures that keep collaboration efficient and push the whole team toward its goals.",
   },
+
   {
-    icon: "◈",
+    icon: "guardian" as const,
+
     title: "Guardian",
+
     subtitle:
       "Raising the bar through responsibility and detail.",
+
     description:
-      "I'm known for taking full responsibility and holding myself to high standards. I catch the small details others miss, ensuring quality in every delivery.",
+      "I’m known for taking full responsibility and holding myself to high standards. I can always notice the small details other people miss, ensuring quality in every delivery.",
   },
+
   {
-    icon: "⌕",
+    icon: "explorer" as const,
+
     title: "Explorer",
+
     subtitle:
       "Openness as a path to stronger design.",
+
     description:
-      "I embrace every opportunity to learn, treating both praise and critique as fuel for growth. Curiosity drives me to understand how others think and seek perspectives beyond my own.",
+      "I embrace every opportunity to learn, treating both praise and critique as fuel for growth. I’m curious about how others think, seeking different perspectives to complement my own.",
   },
 ];
 
-export default function CapabilitiesSection({
-  title = "Capabilities",
-  kicker = "// 01 //",
-  className = "",
-}: CapabilitiesSectionProps) {
+export default function CapabilitiesSection() {
   return (
-    <Section
-      size="sm"
-      className={`capabilities ${className}`}
-    >
-      <Container>
-        <Reveal
-          className="section-heading"
-          distance={18}
-        >
-          <p className="section-kicker">
-            {kicker}
-          </p>
+    <section className="home-capabilities">
+      <div className="home-section-container">
+        <SectionHeading
+          index="01"
+          title="Capabilities"
+        />
 
-          <h2 className="section-title">
-            {title}
-          </h2>
-        </Reveal>
-
-        <Reveal
-          className="capabilities__grid"
-          delay={0.08}
-          distance={22}
+        <StaggerGroup
+          className="home-capabilities__grid"
+          stagger={0.07}
         >
           {capabilities.map(
             (capability) => (
-              <CapabilityCard
+              <StaggerItem
                 key={capability.title}
-                {...capability}
-              />
+                distance={60}
+                className="home-capability-wrap"
+              >
+                <CapabilityCard
+                  {...capability}
+                />
+              </StaggerItem>
             )
           )}
-        </Reveal>
-      </Container>
-    </Section>
+        </StaggerGroup>
+      </div>
+    </section>
   );
 }

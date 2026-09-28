@@ -1,0 +1,473 @@
+/* ========================================
+   SHARED CAPABILITY CARD
+
+   Homepage + About use the SAME card.
+   ======================================== */
+
+
+/* ========================================
+   CARD
+   Exact Homepage visual system
+   ======================================== */
+
+   .capability-card {
+    display: flex;
+  
+    flex-direction: column;
+  
+    width: 100%;
+  
+    height: 369.859375px;
+  
+    padding: 25px;
+  
+    overflow: hidden;
+  
+    border:
+      1px solid
+      rgba(
+        255,
+        255,
+        255,
+        0.055
+      );
+  
+    border-radius: 13px;
+  
+    background:
+      var(
+        --card-background,
+        rgb(24, 25, 28)
+      );
+  }
+  
+  
+  /* ========================================
+     TOP
+     ======================================== */
+  
+  .capability-card__top {
+    display: flex;
+  
+    align-items: center;
+  
+    justify-content:
+      space-between;
+  
+    width: 100%;
+  
+    height: 26px;
+  
+    flex:
+      0
+      0
+      26px;
+  }
+  
+  
+  /* ========================================
+     ICON
+     ======================================== */
+  
+  .capability-card__icon {
+    display: flex;
+  
+    align-items: center;
+  
+    justify-content: center;
+  
+    width: 26px;
+    height: 26px;
+  
+    color:
+      var(
+        --text-white,
+        #fafafa
+      );
+  
+    flex:
+      0
+      0
+      26px;
+  }
+  
+  
+  .capability-card__icon-svg {
+    display: block;
+  
+    width: 26px;
+    height: 26px;
+  
+    fill: none;
+  
+    stroke:
+      currentColor;
+  
+    stroke-width: 2;
+  
+    stroke-linecap:
+      round;
+  
+    stroke-linejoin:
+      round;
+  }
+  
+  
+  .capability-card--captain
+  .capability-card__icon-svg {
+    width: 25px;
+    height: 25px;
+  }
+  
+  
+  .capability-card--guardian
+  .capability-card__icon-svg {
+    width: 26px;
+    height: 26px;
+  }
+  
+  
+  .capability-card--explorer
+  .capability-card__icon-svg {
+    width: 27px;
+    height: 27px;
+  }
+  
+  
+  /* ========================================
+     SIGNAL
+  
+     Captain:
+     orange / gray / gray
+  
+     Guardian:
+     orange / orange / gray
+  
+     Explorer:
+     orange / orange / orange
+     ======================================== */
+  
+  .capability-card__accent {
+    display: flex;
+  
+    align-items: center;
+  
+    gap: 4px;
+  
+    width: 26px;
+  
+    height: 15px;
+  
+    flex:
+      0
+      0
+      auto;
+  }
+  
+  
+  .capability-card__accent-pill {
+    display: block;
+  
+    width: 6px;
+    height: 15px;
+  
+    border-radius: 2px;
+  
+    background:
+      #8c8c8c;
+  }
+  
+  
+  .capability-card__accent-pill--active {
+    background:
+      var(
+        --orange-slash,
+        #ff5e23
+      );
+  }
+  
+  
+  /* ========================================
+     CONTENT
+     ======================================== */
+  
+  .capability-card__content {
+    display: flex;
+  
+    flex-direction: column;
+  
+    gap: 10px;
+  
+    width: 100%;
+  
+    margin-top: 40px;
+  }
+  
+  
+  /* ========================================
+     TITLE
+     ======================================== */
+  
+  .capability-card__title {
+    margin: 0;
+  
+    font-family:
+      var(--font-body),
+      Arial,
+      sans-serif;
+  
+    font-size: 24px;
+  
+    font-weight: 600;
+  
+    line-height:
+      28.8px;
+  
+    letter-spacing:
+      -0.4px;
+  
+    color:
+      var(
+        --orange-title,
+        #ff5e23
+      );
+  }
+  
+  
+  /* ========================================
+     SUBTITLE
+     ======================================== */
+  
+  .capability-card__subtitle {
+    max-width: 350px;
+  
+    margin: 0;
+  
+    font-family:
+      var(--font-body),
+      Arial,
+      sans-serif;
+  
+    font-size: 18px;
+  
+    font-weight: 500;
+  
+    font-style: italic;
+  
+    line-height: 27px;
+  
+    letter-spacing: normal;
+  
+    color:
+      var(
+        --text-white-soft,
+        rgba(
+          255,
+          255,
+          255,
+          0.9
+        )
+      );
+  }
+  
+  
+  /* ========================================
+     BODY
+     ======================================== */
+  
+  .capability-card__body {
+    max-width: 350px;
+  
+    margin: 0;
+  
+    font-family:
+      var(--font-body),
+      Arial,
+      sans-serif;
+  
+    font-size: 16px;
+  
+    font-weight: 500;
+  
+    line-height: 24px;
+  
+    letter-spacing: normal;
+  
+    color:
+      var(
+        --text-gray,
+        rgb(
+          140,
+          140,
+          140
+        )
+      );
+  }
+  
+  
+  /* ========================================
+     HOMEPAGE
+  
+     Homepage keeps original fixed height.
+     ======================================== */
+  
+  .home-capabilities__grid {
+    align-items: stretch;
+  }
+  
+  
+  .home-capabilities__grid
+  > * {
+    height: 100%;
+  }
+  
+  
+  /* ========================================
+     ABOUT
+  
+     Same visual card.
+  
+     Only difference:
+     height follows the longer About copy.
+  
+     The grid row uses the tallest card,
+     so all 3 remain the same height.
+     ======================================== */
+  
+  .about-shapes__grid {
+    align-items: stretch;
+  }
+  
+  
+  .about-shared-capability-wrap {
+    display: flex;
+  
+    width: 100%;
+  
+    height: auto;
+  
+    min-height: 0;
+  
+    align-self: stretch;
+  }
+  
+  
+  .about-shared-capability-wrap
+  .capability-card {
+    width: 100%;
+  
+    height: auto;
+  
+    min-height: 467px;
+  
+    align-self: stretch;
+  }
+  
+  
+  /*
+   * Prevent old About-specific fixed-height
+   * card styles from affecting the new
+   * shared Homepage card.
+   */
+  
+  .about-shapes
+  .capability-card {
+    overflow: visible;
+  }
+  
+  
+  /* ========================================
+     TABLET
+     ======================================== */
+  
+  @media (
+    min-width: 810px
+  ) and (
+    max-width: 1199px
+  ) {
+  
+    .home-capabilities
+    .capability-card {
+      height:
+        372.96875px;
+    }
+  
+  
+    .about-shared-capability-wrap
+    .capability-card {
+      height: auto;
+  
+      min-height:
+        470.90625px;
+    }
+  
+  }
+  
+  
+  /* ========================================
+     MOBILE
+     ======================================== */
+  
+  @media (
+    max-width: 809px
+  ) {
+  
+    .capability-card {
+      width: 345px;
+  
+      height: auto;
+  
+      margin-inline: auto;
+  
+      padding: 25px;
+    }
+  
+  
+    .capability-card__content {
+      margin-top: 40px;
+    }
+  
+  
+    .capability-card__title {
+      font-size:
+        20.8px;
+  
+      line-height:
+        24.96px;
+    }
+  
+  
+    .home-capabilities__grid
+    > :first-child
+    .capability-card {
+      min-height:
+        373.953125px;
+    }
+  
+  
+    .home-capabilities__grid
+    > :not(:first-child)
+    .capability-card {
+      min-height:
+        349.953125px;
+    }
+  
+  
+    .about-shared-capability-wrap {
+      width: 100%;
+  
+      height: auto;
+    }
+  
+  
+    .about-shared-capability-wrap
+    .capability-card {
+      width: 100%;
+  
+      height: auto;
+  
+      min-height:
+        412.046875px;
+    }
+  
+  }

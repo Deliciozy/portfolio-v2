@@ -1,0 +1,261 @@
+/*
+ * Shared Hero background
+ *
+ * Reconstructed from the original
+ * Framer runtime + generated CSS.
+ *
+ * IMPORTANT:
+ * The original Hero is NOT 1000px tall.
+ *
+ * Framer source:
+ *
+ * height: min-content;
+ * min-height: 100vh;
+ *
+ * It appeared as 1000px in our audit
+ * only because Playwright's viewport
+ * was 1000px tall.
+ */
+
+
+/* ========================================
+   RESTORE ORIGINAL HERO HEIGHT
+   ======================================== */
+
+/*
+ * Both Homepage and About use the same
+ * Framer frame logic.
+ *
+ * This fixes the main vertical-range issue.
+ */
+
+ :global(.home-hero),
+ :global(.about-hero) {
+   height: min-content !important;
+ 
+   min-height: 100vh !important;
+ 
+   /*
+    * This is the ORIGINAL Framer fade.
+    *
+    * It does NOT place a black layer
+    * over the shader.
+    *
+    * It gradually makes the entire
+    * Hero transparent near the bottom.
+    */
+ 
+   -webkit-mask-image:
+     linear-gradient(
+       #000000 85%,
+       #0000003d 95%,
+       #00000000 100%
+     );
+ 
+   mask-image:
+     linear-gradient(
+       #000000 85%,
+       #0000003d 95%,
+       #00000000 100%
+     );
+ 
+   -webkit-mask-repeat:
+     no-repeat;
+ 
+   mask-repeat:
+     no-repeat;
+ 
+   -webkit-mask-size:
+     100% 100%;
+ 
+   mask-size:
+     100% 100%;
+ }
+ 
+ 
+ /* ========================================
+    BACKGROUND FRAME
+    ======================================== */
+ 
+ .root {
+   position: absolute;
+ 
+   inset: 0;
+ 
+   z-index: 1;
+ 
+   width: 100%;
+   height: 100%;
+ 
+   overflow: hidden;
+ 
+   /*
+    * No black overlay.
+    *
+    * The WebGL canvas itself renders
+    * the original dark #121314 color.
+    */
+ 
+   background: transparent;
+ 
+   pointer-events: none;
+ }
+ 
+ 
+ /* ========================================
+    ORIGINAL WEBGL CANVAS
+    ======================================== */
+ 
+ .canvas {
+   position: absolute;
+ 
+   inset: 0;
+ 
+   z-index: 1;
+ 
+   display: block;
+ 
+   width: 100%;
+   height: 100%;
+ 
+   /*
+    * IMPORTANT:
+    *
+    * No translateY.
+    * No scaleY.
+    * No artificial cropping.
+    *
+    * The canvas simply inherits the
+    * real responsive Hero height.
+    */
+ 
+   transform: none;
+ 
+   transform-origin:
+     center center;
+ }
+ 
+ 
+ /* ========================================
+    ORIGINAL FRAMER NOISE
+    ======================================== */
+ 
+ .noise {
+   position: absolute;
+ 
+   inset: 0;
+ 
+   z-index: 2;
+ 
+   width: 100%;
+   height: 100%;
+ 
+   /*
+    * Original Framer:
+    *
+    * noise opacity = 0.2
+    * rendered overlay = 0.1
+    */
+ 
+   opacity: 0.1;
+ 
+   background-image:
+     url(
+       "/images/framer-original/about/background-glow.png"
+     );
+ 
+   background-repeat:
+     repeat;
+ 
+   background-position:
+     0 0;
+ 
+   /*
+    * Original Framer:
+    *
+    * noise scale = 0.2
+    * rendered size = 40px
+    */
+ 
+   background-size:
+     40px auto;
+ 
+   pointer-events: none;
+ }
+ 
+ 
+ /* ========================================
+    ORIGINAL FRAMER GRID
+    ======================================== */
+ 
+ .pattern {
+   position: absolute;
+ 
+   inset: 0;
+ 
+   z-index: 3;
+ 
+   width: 100%;
+   height: 100%;
+ 
+   overflow: hidden;
+ 
+   opacity: 0.1;
+ 
+   background-image:
+     url(
+       "/images/framer-original/about/background-grid.png"
+     );
+ 
+   background-repeat:
+     repeat;
+ 
+   background-position:
+     center center;
+ 
+   background-size:
+     40.5px auto;
+ 
+   /*
+    * This is the SECOND fade from
+    * the original Framer source.
+    *
+    * Hero itself fades at the bottom,
+    * while the grid has its own
+    * softer fade.
+    *
+    * Again:
+    * this is transparency,
+    * NOT a black cover.
+    */
+ 
+   -webkit-mask-image:
+     linear-gradient(
+       #00000004 0%,
+       #000000b3 28%,
+       #000000ba 76%,
+       #00000000 96%
+     );
+ 
+   mask-image:
+     linear-gradient(
+       #00000004 0%,
+       #000000b3 28%,
+       #000000ba 76%,
+       #00000000 96%
+     );
+ 
+   -webkit-mask-repeat:
+     no-repeat;
+ 
+   mask-repeat:
+     no-repeat;
+ 
+   -webkit-mask-size:
+     100% 100%;
+ 
+   mask-size:
+     100% 100%;
+ 
+   pointer-events: none;
+ }

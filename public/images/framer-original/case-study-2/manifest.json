@@ -1,0 +1,754 @@
+[
+  {
+    "index": 1,
+    "fileName": "image-01.png",
+    "publicPath": "/images/framer-original/case-study-2/image-01.png",
+    "source": "https://framerusercontent.com/images/3wXkbPpS5Mg3RV257kJjnE.png?width=3600&height=2724",
+    "naturalWidth": 1200,
+    "naturalHeight": 908,
+    "rect": {
+      "x": 120,
+      "y": 0,
+      "width": 1200,
+      "height": 908
+    },
+    "objectFit": "contain",
+    "objectPosition": "50% 50%"
+  },
+  {
+    "index": 2,
+    "fileName": "image-02.png",
+    "publicPath": "/images/framer-original/case-study-2/image-02.png",
+    "source": "https://framerusercontent.com/images/YEV8C23iuylFMuYU1WDTAS61gh0.png?width=2048&height=1247",
+    "naturalWidth": 704,
+    "naturalHeight": 429,
+    "rect": {
+      "x": 630.671875,
+      "y": 1458.5,
+      "width": 704,
+      "height": 429
+    },
+    "objectFit": "cover",
+    "objectPosition": "50% 50%"
+  },
+  {
+    "index": 3,
+    "fileName": "image-03.png",
+    "publicPath": "/images/framer-original/case-study-2/image-03.png",
+    "source": "https://framerusercontent.com/images/YEV8C23iuylFMuYU1WDTAS61gh0.png?width=2048&height=1247",
+    "naturalWidth": 704,
+    "naturalHeight": 429,
+    "rect": {
+      "x": 630.671875,
+      "y": 2596.5,
+      "width": 704,
+      "height": 429
+    },
+    "objectFit": "cover",
+    "objectPosition": "50% 50%"
+  },
+  {
+    "index": 4,
+    "fileName": "image-04.png",
+    "publicPath": "/images/framer-original/case-study-2/image-04.png",
+    "source": "https://framerusercontent.com/images/YEV8C23iuylFMuYU1WDTAS61gh0.png?width=2048&height=1247",
+    "naturalWidth": 703,
+    "naturalHeight": 428,
+    "rect": {
+      "x": 106.703125,
+      "y": 2027.421875,
+      "width": 704,
+      "height": 429
+    },
+    "objectFit": "cover",
+    "objectPosition": "50% 50%"
+  },
+  {
+    "index": 5,
+    "fileName": "image-05.png",
+    "publicPath": "/images/framer-original/case-study-2/image-05.png",
+    "source": "https://framerusercontent.com/images/YEV8C23iuylFMuYU1WDTAS61gh0.png?width=2048&height=1247",
+    "naturalWidth": 703,
+    "naturalHeight": 428,
+    "rect": {
+      "x": 106.703125,
+      "y": 3165.421875,
+      "width": 704,
+      "height": 429
+    },
+    "objectFit": "cover",
+    "objectPosition": "50% 50%"
+  },
+  {
+    "index": 6,
+    "fileName": "image-06.png",
+    "publicPath": "/images/framer-original/case-study-2/image-06.png",
+    "source": "https://framerusercontent.com/images/s6llytQLe9sAjg8U5eHAeFajUs.png?width=3600&height=1263",
+    "naturalWidth": 1200,
+    "naturalHeight": 421,
+    "rect": {
+      "x": 120,
+      "y": 3687,
+      "width": 1200,
+      "height": 421
+    },
+    "objectFit": "contain",
+    "objectPosition": "50% 50%"
+  },
+  {
+    "index": 7,
+    "fileName": "image-07.png",
+    "publicPath": "/images/framer-original/case-study-2/image-07.png",
+    "source": "https://framerusercontent.com/images/78qZokcvcwtzotzSrDAX0nkYVJc.png?width=1080&height=1080",
+    "naturalWidth": 0,
+    "naturalHeight": 0,
+    "rect": {
+      "x": 1791.25,
+      "y": 4782,
+      "width": 10,
+      "height": 10
+    },
+    "objectFit": "cover",
+    "objectPosition": "50% 50%"
+  },
+  {
+    "index": 8,
+    "fileName": "image-08.png",
+    "publicPath": "/images/framer-original/case-study-2/image-08.png",
+    "source": "https://framerusercontent.com/images/78qZokcvcwtzotzSrDAX0nkYVJc.png?width=1080&height=1080",
+    "naturalWidth": 0,
+    "naturalHeight": 0,
+    "rect": {
+      "x": 1763,
+      "y": 4797,
+      "width": 32,
+      "height": 32
+    },
+    "objectFit": "cover",
+    "objectPosition": "50% 50%"
+  },
+  {
+    "index": 9,
+    "fileName": "image-09.jpg",
+    "publicPath": "/images/framer-original/case-study-2/image-09.jpg",
+    "source": "https://framerusercontent.com/images/Vnu7hIqS2MTjuxsdfgw4YXcZw8.jpg?width=564&height=705",
+    "naturalWidth": 0,
+    "naturalHeight": 0,
+    "rect": {
+      "x": -237.75,
+      "y": 4436,
+      "width": 10,
+      "height": 10
+    },
+    "objectFit": "cover",
+    "objectPosition": "50% 50%"
+  },
+  {
+    "index": 10,
+    "fileName": "image-10.jpg",
+    "publicPath": "/images/framer-original/case-study-2/image-10.jpg",
+    "source": "https://framerusercontent.com/images/Vnu7hIqS2MTjuxsdfgw4YXcZw8.jpg?width=564&height=705",
+    "naturalWidth": 0,
+    "naturalHeight": 0,
+    "rect": {
+      "x": -266,
+      "y": 4451,
+      "width": 32,
+      "height": 32
+    },
+    "objectFit": "cover",
+    "objectPosition": "50% 50%"
+  },
+  {
+    "index": 11,
+    "fileName": "image-11.png",
+    "publicPath": "/images/framer-original/case-study-2/image-11.png",
+    "source": "https://framerusercontent.com/images/O1XWSTjzkv8CWJjTTR0ObyflWTo.png?width=3600&height=474",
+    "naturalWidth": 1200,
+    "naturalHeight": 158,
+    "rect": {
+      "x": 120,
+      "y": 4471,
+      "width": 1200,
+      "height": 158
+    },
+    "objectFit": "contain",
+    "objectPosition": "50% 50%"
+  },
+  {
+    "index": 12,
+    "fileName": "image-12.png",
+    "publicPath": "/images/framer-original/case-study-2/image-12.png",
+    "source": "https://framerusercontent.com/images/BgY4Pcmuz9UkMUaOUApjKpvWJL8.png?width=1456&height=816",
+    "naturalWidth": 531,
+    "naturalHeight": 297,
+    "rect": {
+      "x": 728,
+      "y": 4758.0078125,
+      "width": 531,
+      "height": 296.984375
+    },
+    "objectFit": "cover",
+    "objectPosition": "50% 50%"
+  },
+  {
+    "index": 13,
+    "fileName": "image-13.png",
+    "publicPath": "/images/framer-original/case-study-2/image-13.png",
+    "source": "https://framerusercontent.com/images/ZdDHF87Yt4D2SgXQ3vfnC4IdVZU.png?width=1456&height=816",
+    "naturalWidth": 457,
+    "naturalHeight": 256,
+    "rect": {
+      "x": 716,
+      "y": 5249,
+      "width": 457,
+      "height": 256.109375
+    },
+    "objectFit": "cover",
+    "objectPosition": "50% 50%"
+  },
+  {
+    "index": 14,
+    "fileName": "image-14.png",
+    "publicPath": "/images/framer-original/case-study-2/image-14.png",
+    "source": "https://framerusercontent.com/images/FiOFCz1eTP0kDiDq3GzgiZtIKk.png?width=1220&height=960",
+    "naturalWidth": 304,
+    "naturalHeight": 239,
+    "rect": {
+      "x": 777,
+      "y": 5408,
+      "width": 305,
+      "height": 239.890625
+    },
+    "objectFit": "fill",
+    "objectPosition": "50% 50%"
+  },
+  {
+    "index": 15,
+    "fileName": "image-15.png",
+    "publicPath": "/images/framer-original/case-study-2/image-15.png",
+    "source": "https://framerusercontent.com/images/1hOe3jQAahk4eRiyD6DZJhpsA.png?width=184&height=184",
+    "naturalWidth": 184,
+    "naturalHeight": 184,
+    "rect": {
+      "x": 750.5,
+      "y": 6269,
+      "width": 46,
+      "height": 46
+    },
+    "objectFit": "fill",
+    "objectPosition": "50% 50%"
+  },
+  {
+    "index": 16,
+    "fileName": "image-16.png",
+    "publicPath": "/images/framer-original/case-study-2/image-16.png",
+    "source": "https://framerusercontent.com/images/X2sSrlN1TZKC9jJoXozjlFOGec.png?width=184&height=184",
+    "naturalWidth": 184,
+    "naturalHeight": 184,
+    "rect": {
+      "x": 800.5,
+      "y": 6269,
+      "width": 46,
+      "height": 46
+    },
+    "objectFit": "fill",
+    "objectPosition": "50% 50%"
+  },
+  {
+    "index": 17,
+    "fileName": "image-17.png",
+    "publicPath": "/images/framer-original/case-study-2/image-17.png",
+    "source": "https://framerusercontent.com/images/9bJZUtdgxnHPiLOVCuaTot5GE.png?width=184&height=184",
+    "naturalWidth": 184,
+    "naturalHeight": 184,
+    "rect": {
+      "x": 750.5,
+      "y": 6319,
+      "width": 46,
+      "height": 46
+    },
+    "objectFit": "fill",
+    "objectPosition": "50% 50%"
+  },
+  {
+    "index": 18,
+    "fileName": "image-18.png",
+    "publicPath": "/images/framer-original/case-study-2/image-18.png",
+    "source": "https://framerusercontent.com/images/UjXx3uml06N2so00g3xm7ZlhUA.png?width=184&height=184",
+    "naturalWidth": 184,
+    "naturalHeight": 184,
+    "rect": {
+      "x": 800.5,
+      "y": 6319,
+      "width": 46,
+      "height": 46
+    },
+    "objectFit": "fill",
+    "objectPosition": "50% 50%"
+  },
+  {
+    "index": 19,
+    "fileName": "image-19.png",
+    "publicPath": "/images/framer-original/case-study-2/image-19.png",
+    "source": "https://framerusercontent.com/images/Knz8qbqyJsGuDe5Q57e34JM318.png?width=184&height=184",
+    "naturalWidth": 184,
+    "naturalHeight": 184,
+    "rect": {
+      "x": 883.5,
+      "y": 6270,
+      "width": 46,
+      "height": 46
+    },
+    "objectFit": "fill",
+    "objectPosition": "50% 50%"
+  },
+  {
+    "index": 20,
+    "fileName": "image-20.png",
+    "publicPath": "/images/framer-original/case-study-2/image-20.png",
+    "source": "https://framerusercontent.com/images/ZpLZrHfXY3PTLj0zj6dTWXZ0kQ.png?width=184&height=184",
+    "naturalWidth": 184,
+    "naturalHeight": 184,
+    "rect": {
+      "x": 883.5,
+      "y": 6319,
+      "width": 46,
+      "height": 46
+    },
+    "objectFit": "fill",
+    "objectPosition": "50% 50%"
+  },
+  {
+    "index": 21,
+    "fileName": "image-21.png",
+    "publicPath": "/images/framer-original/case-study-2/image-21.png",
+    "source": "https://framerusercontent.com/images/oERalyrQMoRjBM8jEddFRzXBWL4.png?width=602&height=602",
+    "naturalWidth": 46,
+    "naturalHeight": 46,
+    "rect": {
+      "x": 932.5,
+      "y": 6319,
+      "width": 46,
+      "height": 46
+    },
+    "objectFit": "cover",
+    "objectPosition": "50% 50%"
+  },
+  {
+    "index": 22,
+    "fileName": "image-22.png",
+    "publicPath": "/images/framer-original/case-study-2/image-22.png",
+    "source": "https://framerusercontent.com/images/YLow5cWL6KeSjuqQGtg2lcrzKX4.png?width=184&height=184",
+    "naturalWidth": 184,
+    "naturalHeight": 184,
+    "rect": {
+      "x": 932.5,
+      "y": 6270,
+      "width": 46,
+      "height": 46
+    },
+    "objectFit": "fill",
+    "objectPosition": "50% 50%"
+  },
+  {
+    "index": 23,
+    "fileName": "image-23.png",
+    "publicPath": "/images/framer-original/case-study-2/image-23.png",
+    "source": "https://framerusercontent.com/images/1hOe3jQAahk4eRiyD6DZJhpsA.png?width=184&height=184",
+    "naturalWidth": 184,
+    "naturalHeight": 184,
+    "rect": {
+      "x": 1104.5,
+      "y": 6249,
+      "width": 46,
+      "height": 46
+    },
+    "objectFit": "fill",
+    "objectPosition": "50% 50%"
+  },
+  {
+    "index": 24,
+    "fileName": "image-24.png",
+    "publicPath": "/images/framer-original/case-study-2/image-24.png",
+    "source": "https://framerusercontent.com/images/X2sSrlN1TZKC9jJoXozjlFOGec.png?width=184&height=184",
+    "naturalWidth": 184,
+    "naturalHeight": 184,
+    "rect": {
+      "x": 1204.5,
+      "y": 6249,
+      "width": 46,
+      "height": 46
+    },
+    "objectFit": "fill",
+    "objectPosition": "50% 50%"
+  },
+  {
+    "index": 25,
+    "fileName": "image-25.png",
+    "publicPath": "/images/framer-original/case-study-2/image-25.png",
+    "source": "https://framerusercontent.com/images/9bJZUtdgxnHPiLOVCuaTot5GE.png?width=184&height=184",
+    "naturalWidth": 184,
+    "naturalHeight": 184,
+    "rect": {
+      "x": 1154.5,
+      "y": 6351,
+      "width": 46,
+      "height": 46
+    },
+    "objectFit": "fill",
+    "objectPosition": "50% 50%"
+  },
+  {
+    "index": 26,
+    "fileName": "image-26.png",
+    "publicPath": "/images/framer-original/case-study-2/image-26.png",
+    "source": "https://framerusercontent.com/images/UjXx3uml06N2so00g3xm7ZlhUA.png?width=184&height=184",
+    "naturalWidth": 184,
+    "naturalHeight": 184,
+    "rect": {
+      "x": 1154.5,
+      "y": 6299,
+      "width": 46,
+      "height": 46
+    },
+    "objectFit": "fill",
+    "objectPosition": "50% 50%"
+  },
+  {
+    "index": 27,
+    "fileName": "image-27.png",
+    "publicPath": "/images/framer-original/case-study-2/image-27.png",
+    "source": "https://framerusercontent.com/images/oERalyrQMoRjBM8jEddFRzXBWL4.png?width=602&height=602",
+    "naturalWidth": 46,
+    "naturalHeight": 46,
+    "rect": {
+      "x": 1104.5,
+      "y": 6299,
+      "width": 46,
+      "height": 46
+    },
+    "objectFit": "cover",
+    "objectPosition": "50% 50%"
+  },
+  {
+    "index": 28,
+    "fileName": "image-28.png",
+    "publicPath": "/images/framer-original/case-study-2/image-28.png",
+    "source": "https://framerusercontent.com/images/ZpLZrHfXY3PTLj0zj6dTWXZ0kQ.png?width=184&height=184",
+    "naturalWidth": 184,
+    "naturalHeight": 184,
+    "rect": {
+      "x": 1154.5,
+      "y": 6249,
+      "width": 46,
+      "height": 46
+    },
+    "objectFit": "fill",
+    "objectPosition": "50% 50%"
+  },
+  {
+    "index": 29,
+    "fileName": "image-29.png",
+    "publicPath": "/images/framer-original/case-study-2/image-29.png",
+    "source": "https://framerusercontent.com/images/YLow5cWL6KeSjuqQGtg2lcrzKX4.png?width=184&height=184",
+    "naturalWidth": 184,
+    "naturalHeight": 184,
+    "rect": {
+      "x": 1204.5,
+      "y": 6299,
+      "width": 46,
+      "height": 46
+    },
+    "objectFit": "fill",
+    "objectPosition": "50% 50%"
+  },
+  {
+    "index": 30,
+    "fileName": "image-30.png",
+    "publicPath": "/images/framer-original/case-study-2/image-30.png",
+    "source": "https://framerusercontent.com/images/Knz8qbqyJsGuDe5Q57e34JM318.png?width=184&height=184",
+    "naturalWidth": 184,
+    "naturalHeight": 184,
+    "rect": {
+      "x": 1104.5,
+      "y": 6351,
+      "width": 46,
+      "height": 46
+    },
+    "objectFit": "fill",
+    "objectPosition": "50% 50%"
+  },
+  {
+    "index": 31,
+    "fileName": "image-31.png",
+    "publicPath": "/images/framer-original/case-study-2/image-31.png",
+    "source": "https://framerusercontent.com/images/W8ppsSC4TbEeWJrxLVwUMb5ttE.png?width=3600&height=588",
+    "naturalWidth": 1200,
+    "naturalHeight": 196,
+    "rect": {
+      "x": 120,
+      "y": 7099,
+      "width": 1200,
+      "height": 196
+    },
+    "objectFit": "contain",
+    "objectPosition": "50% 50%"
+  },
+  {
+    "index": 32,
+    "fileName": "image-32.png",
+    "publicPath": "/images/framer-original/case-study-2/image-32.png",
+    "source": "https://framerusercontent.com/images/nwEVX5w3O6Jhr8aH5TrURe1T92Q.png?width=1024&height=1024",
+    "naturalWidth": 431,
+    "naturalHeight": 431,
+    "rect": {
+      "x": 778,
+      "y": 7396,
+      "width": 431,
+      "height": 431
+    },
+    "objectFit": "cover",
+    "objectPosition": "50% 50%"
+  },
+  {
+    "index": 33,
+    "fileName": "image-33.png",
+    "publicPath": "/images/framer-original/case-study-2/image-33.png",
+    "source": "https://framerusercontent.com/images/O88RuEqAZfoqpeCR94tcjbq8A.png?width=3768&height=4000",
+    "naturalWidth": 167,
+    "naturalHeight": 177,
+    "rect": {
+      "x": 906,
+      "y": 7481,
+      "width": 167,
+      "height": 177
+    },
+    "objectFit": "cover",
+    "objectPosition": "50% 50%"
+  },
+  {
+    "index": 34,
+    "fileName": "image-34.png",
+    "publicPath": "/images/framer-original/case-study-2/image-34.png",
+    "source": "https://framerusercontent.com/images/pkWR4ydOghGQtvXN9KuKCtsx6Q.png?width=999&height=2304",
+    "naturalWidth": 351,
+    "naturalHeight": 809,
+    "rect": {
+      "x": 906,
+      "y": 7437,
+      "width": 351,
+      "height": 567
+    },
+    "objectFit": "contain",
+    "objectPosition": "50% 50%"
+  },
+  {
+    "index": 35,
+    "fileName": "image-35.png",
+    "publicPath": "/images/framer-original/case-study-2/image-35.png",
+    "source": "https://framerusercontent.com/images/bSsa4FX6GpxCxczkucYv0LxXjU0.png?width=2132&height=1288",
+    "naturalWidth": 533,
+    "naturalHeight": 322,
+    "rect": {
+      "x": 727,
+      "y": 7960,
+      "width": 533,
+      "height": 322
+    },
+    "objectFit": "contain",
+    "objectPosition": "50% 50%"
+  },
+  {
+    "index": 36,
+    "fileName": "image-36.png",
+    "publicPath": "/images/framer-original/case-study-2/image-36.png",
+    "source": "https://framerusercontent.com/images/POZ4MqQwG6MTK9PBaLh2IgxEGw.png?width=2066&height=1325",
+    "naturalWidth": 517,
+    "naturalHeight": 331,
+    "rect": {
+      "x": 180,
+      "y": 8778.5,
+      "width": 517,
+      "height": 331
+    },
+    "objectFit": "contain",
+    "objectPosition": "50% 50%"
+  },
+  {
+    "index": 37,
+    "fileName": "image-37.png",
+    "publicPath": "/images/framer-original/case-study-2/image-37.png",
+    "source": "https://framerusercontent.com/images/RT22KBPfGyB2t7lg2wqu7nHpM.png?width=2057&height=1325",
+    "naturalWidth": 515,
+    "naturalHeight": 331,
+    "rect": {
+      "x": 746,
+      "y": 8778,
+      "width": 515,
+      "height": 332
+    },
+    "objectFit": "contain",
+    "objectPosition": "50% 50%"
+  },
+  {
+    "index": 38,
+    "fileName": "image-38.png",
+    "publicPath": "/images/framer-original/case-study-2/image-38.png",
+    "source": "https://framerusercontent.com/images/E30VNg1sTwCZjWc9WCSOSf6IxtU.png?width=1376&height=883",
+    "naturalWidth": 344,
+    "naturalHeight": 221,
+    "rect": {
+      "x": 200,
+      "y": 9219,
+      "width": 344,
+      "height": 221
+    },
+    "objectFit": "contain",
+    "objectPosition": "50% 50%"
+  },
+  {
+    "index": 39,
+    "fileName": "image-39.png",
+    "publicPath": "/images/framer-original/case-study-2/image-39.png",
+    "source": "https://framerusercontent.com/images/R2FuIyBaXcLoPnowjtZildFlaCM.png?width=1380&height=896",
+    "naturalWidth": 345,
+    "naturalHeight": 223,
+    "rect": {
+      "x": 241,
+      "y": 9281,
+      "width": 345,
+      "height": 224
+    },
+    "objectFit": "contain",
+    "objectPosition": "50% 50%"
+  },
+  {
+    "index": 40,
+    "fileName": "image-40.svg",
+    "publicPath": "/images/framer-original/case-study-2/image-40.svg",
+    "source": "https://framerusercontent.com/images/F0OnkzMWyUZ5V151LJSsELCD9FM.svg?width=431&height=29",
+    "naturalWidth": 431,
+    "naturalHeight": 29,
+    "rect": {
+      "x": 805,
+      "y": 9219,
+      "width": 431,
+      "height": 29
+    },
+    "objectFit": "contain",
+    "objectPosition": "50% 50%"
+  },
+  {
+    "index": 41,
+    "fileName": "image-41.svg",
+    "publicPath": "/images/framer-original/case-study-2/image-41.svg",
+    "source": "https://framerusercontent.com/images/y162lggrWZXs5ZCrde9VPeqk.svg?width=433&height=29",
+    "naturalWidth": 433,
+    "naturalHeight": 29,
+    "rect": {
+      "x": 805,
+      "y": 9302,
+      "width": 433,
+      "height": 29
+    },
+    "objectFit": "contain",
+    "objectPosition": "50% 50%"
+  },
+  {
+    "index": 42,
+    "fileName": "image-42.svg",
+    "publicPath": "/images/framer-original/case-study-2/image-42.svg",
+    "source": "https://framerusercontent.com/images/QFQw5INFtj1EuhPuiGK6XKckWMM.svg?width=434&height=48",
+    "naturalWidth": 434,
+    "naturalHeight": 48,
+    "rect": {
+      "x": 805,
+      "y": 9407,
+      "width": 434,
+      "height": 48
+    },
+    "objectFit": "contain",
+    "objectPosition": "50% 50%"
+  },
+  {
+    "index": 43,
+    "fileName": "image-43.png",
+    "publicPath": "/images/framer-original/case-study-2/image-43.png",
+    "source": "https://framerusercontent.com/images/zXYa9DNU6SSqQZQdpLFptN9A.png?width=1381&height=790",
+    "naturalWidth": 345,
+    "naturalHeight": 197,
+    "rect": {
+      "x": 197.421875,
+      "y": 10048,
+      "width": 345,
+      "height": 198
+    },
+    "objectFit": "contain",
+    "objectPosition": "50% 50%"
+  },
+  {
+    "index": 44,
+    "fileName": "image-44.png",
+    "publicPath": "/images/framer-original/case-study-2/image-44.png",
+    "source": "https://framerusercontent.com/images/awCMUg3C65sE6wlXIOau9bq7EGQ.png?width=2556&height=789",
+    "naturalWidth": 639,
+    "naturalHeight": 197,
+    "rect": {
+      "x": 620.859375,
+      "y": 10048.5,
+      "width": 639,
+      "height": 197
+    },
+    "objectFit": "contain",
+    "objectPosition": "50% 50%"
+  },
+  {
+    "index": 45,
+    "fileName": "image-45.png",
+    "publicPath": "/images/framer-original/case-study-2/image-45.png",
+    "source": "https://framerusercontent.com/images/2YPg03kKlBFM3e6Uu1fBR7ul97k.png?width=2858&height=1162",
+    "naturalWidth": 1080,
+    "naturalHeight": 439,
+    "rect": {
+      "x": 180,
+      "y": 10335,
+      "width": 1080,
+      "height": 438.984375
+    },
+    "objectFit": "cover",
+    "objectPosition": "50% 50%"
+  },
+  {
+    "index": 46,
+    "fileName": "image-46.png",
+    "publicPath": "/images/framer-original/case-study-2/image-46.png",
+    "source": "https://framerusercontent.com/images/yM5O2szbPrf6pjpVKlCj4Gl9RU.png?width=2071&height=1328",
+    "naturalWidth": 518,
+    "naturalHeight": 332,
+    "rect": {
+      "x": 180,
+      "y": 11312,
+      "width": 518,
+      "height": 332
+    },
+    "objectFit": "contain",
+    "objectPosition": "50% 50%"
+  },
+  {
+    "index": 47,
+    "fileName": "image-47.png",
+    "publicPath": "/images/framer-original/case-study-2/image-47.png",
+    "source": "https://framerusercontent.com/images/gcMlYA7FMh6kg1hSoDymd8Wji2A.png?width=2072&height=1328",
+    "naturalWidth": 518,
+    "naturalHeight": 331,
+    "rect": {
+      "x": 736,
+      "y": 11312,
+      "width": 518,
+      "height": 332
+    },
+    "objectFit": "contain",
+    "objectPosition": "50% 50%"
+  }
+]

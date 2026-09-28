@@ -1,52 +1,45 @@
-import Container from "@/components/layout/Container";
-import Section from "@/components/layout/Section";
-import ProjectRow from "@/components/project/ProjectRow";
-import Reveal from "@/components/motion/Reveal";
-
 import StaggerGroup, {
   StaggerItem,
 } from "@/components/motion/StaggerGroup";
 
-import { projects } from "@/data/projects";
+import ProjectRow from "@/components/project/ProjectRow";
+import SectionHeading from "@/components/ui/SectionHeading";
+
+import {
+  homeProjects,
+} from "@/data/homeProjects";
 
 export default function ProjectsSection() {
   return (
-    <Section
+    <section
       id="work"
-      size="sm"
-      className="projects-section"
+      className="home-projects"
     >
-      <Container>
-        <Reveal
-          className="section-heading"
-          distance={18}
-        >
-          <p className="section-kicker">
-            // 03 //
-          </p>
-
-          <h2 className="section-title">
-            My Projects
-          </h2>
-        </Reveal>
+      <div className="home-section-container">
+        <SectionHeading
+          index="03"
+          title="My Projects"
+        />
 
         <StaggerGroup
-          className="projects-list"
-          stagger={0.1}
-          delay={0.05}
+          className="home-projects__list"
+          stagger={0.08}
         >
-          {projects.map((project) => (
-            <StaggerItem
-              key={project.slug}
-              distance={24}
-            >
-              <ProjectRow
-                project={project}
-              />
-            </StaggerItem>
-          ))}
+          {homeProjects.map(
+            (project) => (
+              <StaggerItem
+                key={project.slug}
+                distance={60}
+                className="home-project-wrap"
+              >
+                <ProjectRow
+                  project={project}
+                />
+              </StaggerItem>
+            )
+          )}
         </StaggerGroup>
-      </Container>
-    </Section>
+      </div>
+    </section>
   );
 }

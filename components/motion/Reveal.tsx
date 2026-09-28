@@ -5,7 +5,14 @@ import {
   useReducedMotion,
 } from "motion/react";
 
-import type { ReactNode } from "react";
+import {
+  useEffect,
+  useState,
+} from "react";
+
+import type {
+  ReactNode,
+} from "react";
 
 type RevealProps = {
   children: ReactNode;
@@ -25,14 +32,36 @@ export default function Reveal({
   const shouldReduceMotion =
     useReducedMotion();
 
+  const [mounted, setMounted] =
+    useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  /*
+   * Important:
+   * Before JavaScript finishes loading,
+   * render normal visible content.
+   *
+   * This prevents the portfolio from
+   * becoming invisible if Motion fails
+   * to initialize on a device.
+   */
+  if (!mounted) {
+    return (
+      <div className={className}>
+        {children}
+      </div>
+    );
+  }
+
   return (
     <motion.div
       className={className}
       initial={
         shouldReduceMotion
-          ? {
-              opacity: 1,
-            }
+          ? false
           : {
               opacity: 0,
               y: distance,

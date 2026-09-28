@@ -1,0 +1,18 @@
+[
+  {
+    "index": 1,
+    "fileName": "image-01.svg",
+    "publicPath": "/images/framer-original/resume/image-01.svg",
+    "source": "https://framerusercontent.com/images/234UGkRdd61aggpU7D6czMzdSQ.svg?width=695&height=1012",
+    "naturalWidth": 1112,
+    "naturalHeight": 1620,
+    "rect": {
+      "x": 164,
+      "y": 0,
+      "width": 1112,
+      "height": 1619.1875
+    },
+    "objectFit": "cover",
+    "objectPosition": "50% 50%"
+  }
+]

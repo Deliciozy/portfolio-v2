@@ -1,47 +1,60 @@
-import Container from "@/components/layout/Container";
-import Reveal from "@/components/motion/Reveal";
+import Image from "next/image";
 
-import { aboutHero } from "@/data/about";
+import HeroWarpBackground from "@/components/backgrounds/HeroWarpBackground";
+
+import {
+  aboutHero,
+} from "@/data/about";
 
 export default function AboutHero() {
   return (
-    <section className="about-hero">
-      <Container>
-        <div className="about-hero__grid">
-          <Reveal
-            className="about-hero__content"
-            distance={20}
-          >
-            <h1 className="about-hero__title">
-              {aboutHero.title}
-            </h1>
+    <header className="about-hero">
+      <HeroWarpBackground />
 
-            <p className="about-hero__subtitle">
-              {aboutHero.subtitle}
+      <div className="about-hero__row">
+        <div className="about-hero__text">
+          <h1 className="about-hero__title">
+            {aboutHero.title}
+          </h1>
+
+          <div className="about-hero__body">
+            <h3 className="about-hero__subtitle">
+              {
+                aboutHero.subtitle
+              }
+            </h3>
+
+            <p>
+              {
+                aboutHero
+                  .paragraphs[0]
+              }
             </p>
 
-            <div className="about-hero__body">
-              {aboutHero.body.map(
-                (paragraph) => (
-                  <p key={paragraph}>
-                    {paragraph}
-                  </p>
-                )
-              )}
-            </div>
-          </Reveal>
-
-          <Reveal
-            className="about-hero__media"
-            delay={0.12}
-            distance={24}
-          >
-            <div className="about-hero__image-placeholder">
-              {aboutHero.imageLabel}
-            </div>
-          </Reveal>
+            <p>
+              {
+                aboutHero
+                  .paragraphs[1]
+              }
+            </p>
+          </div>
         </div>
-      </Container>
-    </section>
+
+        <div className="about-hero__media">
+          <Image
+            src={
+              aboutHero.image
+            }
+            alt={
+              aboutHero.imageAlt
+            }
+            width={355}
+            height={473}
+            priority
+            className="about-hero__image"
+          />
+        </div>
+      </div>
+    </header>
   );
 }

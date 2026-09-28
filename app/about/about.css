@@ -1,171 +1,954 @@
 /* ========================================
-   ABOUT HERO
+   ABOUT — FRAMER AUDIT REBUILD
    ======================================== */
 
-   .about-hero {
-    padding-top: 72px;
-    padding-bottom: var(--section-sm);
+   .about-page {
+    width: 100%;
+  
+    overflow-x: hidden;
+  
+    background: #080808;
+  
+    color: #fafafa;
   }
   
-  .about-hero__grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 48px;
+  .about-section-container {
+    width: 1200px;
+  
+    margin-inline: auto;
   }
   
-  .about-hero__content {
-    min-width: 0;
+  /* ========================================
+     SHARED SECTION HEADING
+     ======================================== */
+  
+  .about-page
+    .home-section-heading {
+    display: flex;
+  
+    flex-direction: column;
+  
+    gap: 25px;
+  
+    width: 1200px;
+    height: 130.796875px;
+  }
+  
+  .about-page
+    .home-section-index {
+    display: flex;
+  
+    align-items: center;
+  
+    gap: 5px;
+  
+    height: 28.796875px;
+  }
+  
+  .about-page
+    .home-section-index__slash {
+    font-family:
+      var(--font-body);
+  
+    font-size: 14.4px;
+  
+    font-weight: 600;
+  
+    line-height: 20.88px;
+  
+    letter-spacing:
+      -0.504px;
+  
+    color: #e65429;
+  }
+  
+  .about-page
+    .home-section-index__number {
+    font-family:
+      var(--font-body);
+  
+    font-size: 24px;
+  
+    font-weight: 600;
+  
+    line-height: 28.8px;
+  
+    letter-spacing:
+      -0.4px;
+  
+    color: #fafafa;
+  }
+  
+  .about-page
+    .home-section-heading__title {
+    font-family:
+      var(--font-display);
+  
+    font-size: 70px;
+  
+    font-weight: 600;
+  
+    line-height: 77px;
+  
+    letter-spacing:
+      -3.5px;
+  
+    color: #fafafa;
+  }
+  
+  /* ========================================
+     HERO
+     ======================================== */
+  
+  .about-hero {
+    position: relative;
+  
+    width: 100%;
+    height: 1000px;
+  
+    overflow: hidden;
+  
+    padding:
+      150px
+      40px
+      50px;
+  
+    background: #080808;
+  }
+  
+  /*
+   * Original Framer hierarchy:
+   *
+   * grid parent opacity = .1
+   * canvas animation layer
+   * texture opacity = .1
+   */
+  
+  .about-hero__grid-background,
+  .about-hero__canvas-background,
+  .about-hero__texture-background {
+    position: absolute;
+  
+    inset: 0;
+  
+    pointer-events: none;
+  }
+  
+  /* Exact Framer grid asset.
+     Important: original PARENT opacity = .1 */
+  
+  .about-hero__grid-background {
+    z-index: 0;
+  
+    opacity: 0.1;
+  
+    background-image:
+      url(
+        "/images/framer-original/about/background-grid.png"
+      );
+  
+    background-repeat: repeat;
+  
+    background-position:
+      50% 50%;
+  
+    background-size:
+      40.5px auto;
+  }
+  
+  /*
+   * Rasterized frame from the actual
+   * Framer canvas.
+   */
+  
+  .about-hero__canvas-background {
+    z-index: 1;
+  
+    background-image:
+      url(
+        "/images/framer-original/about/hero-canvas-desktop.png"
+      );
+  
+    background-repeat:
+      no-repeat;
+  
+    background-position:
+      center top;
+  
+    background-size:
+      100% 100%;
+  }
+  
+  /* Second original Framer texture layer */
+  
+  .about-hero__texture-background {
+    z-index: 2;
+  
+    opacity: 0.1;
+  
+    background-image:
+      url(
+        "/images/framer-original/about/background-glow.png"
+      );
+  
+    background-repeat: repeat;
+  
+    background-position:
+      0 0;
+  
+    background-size:
+      40px auto;
+  }
+  
+  .about-hero__row {
+    position: relative;
+  
+    z-index: 3;
+  
+    display: flex;
+  
+    align-items: center;
+  
+    width:
+      1188.796875px;
+  
+    height: 444px;
+  
+    margin-inline: auto;
+  }
+  
+  .about-hero__text {
+    display: flex;
+  
+    flex-direction: column;
+  
+    justify-content: center;
+  
+    width: 672px;
+    height: 444px;
   }
   
   .about-hero__title {
-    max-width: 12ch;
+    font-family:
+      var(--font-display);
   
-    font-size: var(--text-h2);
-    font-weight: var(--weight-semibold);
-    line-height: var(--leading-heading);
-    letter-spacing: var(--tracking-heading);
-  }
+    font-size: 70px;
   
-  .about-hero__subtitle {
-    margin-top: 14px;
+    font-weight: 600;
   
-    color: var(--accent);
+    line-height: 77px;
   
-    font-size: var(--text-body);
-    font-weight: var(--weight-medium);
+    letter-spacing:
+      -3.5px;
+  
+    color: #fafafa;
   }
   
   .about-hero__body {
     display: flex;
+  
     flex-direction: column;
-    gap: 12px;
   
-    max-width: 60ch;
+    gap: 16px;
   
-    margin-top: 12px;
+    width: 672px;
   
-    color: var(--foreground);
+    margin-top:
+      24.203125px;
   }
   
-  .about-hero__image-placeholder {
-    display: grid;
-    place-items: center;
+  .about-hero__subtitle {
+    font-family:
+      var(--font-body);
   
+    font-size: 24px;
+  
+    font-weight: 600;
+  
+    line-height:
+      28.8px;
+  
+    letter-spacing:
+      -0.4px;
+  
+    color: #e65428;
+  }
+  
+  .about-hero__body p {
+    width: 672px;
+  
+    font-family:
+      var(--font-body);
+  
+    font-size: 20px;
+  
+    font-weight: 400;
+  
+    line-height: 24px;
+  
+    letter-spacing:
+      -0.3px;
+  
+    color: #fafafa;
+  }
+  
+  .about-hero__media {
+    display: flex;
+  
+    align-items: center;
+  
+    justify-content: center;
+  
+    width:
+      516.796875px;
+  
+    height: 444px;
+  }
+  
+  .about-hero__image {
+    display: block;
+  
+    width:
+      316.21875px;
+  
+    height:
+      421.796875px;
+  
+    border-radius: 12px;
+  
+    object-fit: cover;
+  
+    object-position: center;
+  }
+  
+  /* ========================================
+     WHAT SHAPES ME
+     ======================================== */
+  
+  .about-shapes {
     width: 100%;
-    aspect-ratio: 4 / 3;
   
-    border: 1px solid var(--border);
-    border-radius: var(--radius-md);
+    height:
+      850.796875px;
   
-    background: var(--surface-soft);
+    padding:
+      100px
+      40px;
   
-    color: var(--muted);
+    background: #080808;
+  }
   
-    font-size: var(--text-small);
+  .about-shapes
+    .about-section-container {
+    display: flex;
+  
+    flex-direction: column;
+  
+    gap: 65px;
+  }
+  
+  .about-shapes__grid {
+    display: grid;
+  
+    grid-template-columns:
+      repeat(
+        3,
+        388.71875px
+      );
+  
+    gap: 13px;
+  
+    width: 1200px;
+  }
+  
+  .about-capability-wrap,
+  .about-capability {
+    width:
+      388.71875px;
+  
+    height: 467px;
+  }
+  
+  .about-capability {
+    display: flex;
+  
+    flex-direction: column;
+  
+    gap: 15px;
+  
+    padding: 25px;
+  
+    overflow: hidden;
+  
+    border-radius: 13px;
+  
+    background:
+      rgb(
+        24,
+        25,
+        28
+      );
+  }
+  
+  .about-capability__top {
+    display: flex;
+  
+    align-items: center;
+  
+    justify-content:
+      space-between;
+  
+    width:
+      338.71875px;
+  
+    height: 26px;
+  }
+  
+  .about-capability__icon {
+    width: 26px;
+    height: 26px;
+  
+    color: #fafafa;
+  }
+  
+  .about-capability__icon
+    svg {
+    width: 26px;
+    height: 26px;
+  }
+  
+  .about-capability__signal {
+    display: flex;
+  
+    align-items: center;
+  
+    gap: 4px;
+  
+    width: 36px;
+    height: 15px;
+  }
+  
+  .about-capability__signal
+    i {
+    display: block;
+  
+    width: 6px;
+    height: 15px;
+  
+    border-radius: 2px;
+  
+    background: #8c8c8c;
+  }
+  
+  .about-capability__signal
+    i:nth-child(1),
+  .about-capability__signal
+    i:nth-child(2) {
+    background: #ff5e23;
+  }
+  
+  .about-capability__copy {
+    display: flex;
+  
+    flex-direction: column;
+  
+    gap: 10px;
+  
+    width:
+      338.71875px;
+  
+    margin-top: 40px;
+  }
+  
+  .about-capability__title {
+    font-size: 24px;
+  
+    font-weight: 600;
+  
+    line-height:
+      28.8px;
+  
+    letter-spacing:
+      -0.4px;
+  
+    color: #ff5e23;
+  }
+  
+  .about-capability__subtitle {
+    font-size: 18px;
+  
+    font-weight: 500;
+  
+    font-style: italic;
+  
+    line-height: 27px;
+  
+    color:
+      rgba(
+        255,
+        255,
+        255,
+        0.9
+      );
+  }
+  
+  .about-capability__description {
+    font-size: 16px;
+  
+    font-weight: 500;
+  
+    line-height: 24px;
+  
+    color:
+      rgb(
+        140,
+        140,
+        140
+      );
   }
   
   /* ========================================
      INTERESTS
      ======================================== */
   
-  .interests__grid {
-    display: grid;
-    grid-template-columns: 1fr;
+  .about-interests {
+    width: 100%;
   
-    gap: var(--gap-md);
+    height:
+      1061.796875px;
+  
+    padding:
+      100px
+      40px;
+  
+    background: #080808;
   }
   
-  .interest-card {
-    height: 100%;
+  .about-interests
+    .about-section-container {
+    display: flex;
+  
+    flex-direction: column;
+  
+    gap: 65px;
+  }
+  
+  .about-interests__grid {
+    display: grid;
+  
+    grid-template-columns:
+      repeat(
+        3,
+        396px
+      );
+  
+    gap: 9px;
+  
+    width: 1206px;
+  
+    margin-left: -3px;
+  }
+  
+  .about-interest-wrap,
+  .about-interest {
+    width: 396px;
+    height: 666px;
+  }
+  
+  .about-interest {
+    display: flex;
+  
+    flex-direction: column;
   
     overflow: hidden;
   
-    border: 1px solid var(--border);
-    border-radius: var(--radius-md);
+    border-radius: 12px;
   
-    background: var(--surface);
+    background:
+      rgb(
+        23,
+        25,
+        29
+      );
   }
   
-  .interest-card__media {
-    display: grid;
-    place-items: center;
+  .about-interest__image-wrap {
+    flex: 0 0 auto;
   
-    width: 100%;
-    aspect-ratio: 4 / 3;
+    width: 322px;
+    height: 341px;
   
-    background: var(--surface-soft);
+    margin:
+      24px
+      auto
+      0;
   
-    color: var(--muted);
+    overflow: hidden;
   
-    font-size: var(--text-small);
+    border-radius: 8px;
   }
   
-  .interest-card__content {
-    padding: 18px;
+  .about-interest__image {
+    width: 322px;
+    height: 341px;
+  
+    object-fit: fill;
   }
   
-  .interest-card__title {
-    font-size: var(--text-h3);
-    font-weight: var(--weight-medium);
-    line-height: var(--leading-heading);
+  .about-interest__title {
+    width: 322px;
+  
+    margin:
+      20px
+      auto
+      0;
+  
+    font-size: 24px;
+  
+    font-weight: 600;
+  
+    line-height:
+      28.8px;
+  
+    color: #ffffff;
   }
   
-  .interest-card__description {
-    margin-top: 10px;
+  .about-interest__description {
+    width: 322px;
   
-    color: var(--muted);
+    margin:
+      12.203125px
+      auto
+      0;
   
-    font-size: var(--text-body);
+    font-size: 20px;
+  
+    font-weight: 400;
+  
+    line-height: 24px;
+  
+    color:
+      rgba(
+        255,
+        255,
+        255,
+        0.6
+      );
   }
   
   /* ========================================
      TABLET
      ======================================== */
   
-  @media (min-width: 768px) {
+  @media (
+    min-width: 810px
+  ) and (
+    max-width: 1199px
+  ) {
+    .about-section-container {
+      width: 954px;
+    }
+  
+    .about-page
+      .home-section-heading {
+      width: 954px;
+  
+      height:
+        114.296875px;
+    }
+  
+    .about-page
+      .home-section-heading__title {
+      font-size: 55px;
+  
+      line-height:
+        60.5px;
+  
+      letter-spacing:
+        -2.75px;
+    }
+  
     .about-hero {
-      padding-top: 96px;
+      height: 298px;
+  
+      padding: 0;
     }
   
-    .about-hero__grid {
-      grid-template-columns:
-        minmax(0, 1.2fr)
-        minmax(260px, 0.8fr);
-  
-      align-items: center;
-  
-      gap: 56px;
+    .about-hero__canvas-background {
+      background-image:
+        url(
+          "/images/framer-original/about/hero-canvas-tablet.png"
+        );
     }
   
-    .interests__grid {
+    .about-hero__row {
+      display: none;
+    }
+  
+    .about-shapes {
+      height:
+        1222.296875px;
+  
+      padding:
+        80px
+        35px;
+    }
+  
+    .about-shapes__grid {
       grid-template-columns:
-        repeat(2, minmax(0, 1fr));
+        repeat(
+          2,
+          391.96875px
+        );
+  
+      column-gap:
+        87.53125px;
+  
+      row-gap:
+        14.625px;
+  
+      width: 954px;
+    }
+  
+    .about-capability-wrap,
+    .about-capability {
+      width:
+        391.96875px;
+  
+      height:
+        470.90625px;
+    }
+  
+    .about-capability__top,
+    .about-capability__copy {
+      width:
+        341.96875px;
+    }
+  
+    .about-interests {
+      height:
+        1005.296875px;
+  
+      padding:
+        80px
+        35px;
+    }
+  
+    .about-interests__grid {
+      grid-template-columns:
+        repeat(
+          3,
+          314.8125px
+        );
+  
+      gap: 9px;
+  
+      width:
+        962.4375px;
+  
+      margin-left:
+        -4.21875px;
+    }
+  
+    .about-interest-wrap,
+    .about-interest {
+      width:
+        314.8125px;
+  
+      height: 666px;
+    }
+  
+    .about-interest__image-wrap,
+    .about-interest__image,
+    .about-interest__title,
+    .about-interest__description {
+      width: 322px;
+    }
+  
+    .about-interest__image-wrap,
+    .about-interest__title,
+    .about-interest__description {
+      margin-left: 24px;
+      margin-right: 0;
     }
   }
   
   /* ========================================
-     DESKTOP
+     MOBILE
      ======================================== */
   
-  @media (min-width: 1200px) {
+  @media (
+    max-width: 809px
+  ) {
+    .about-section-container {
+      width: 350px;
+    }
+  
+    .about-page
+      .home-section-heading {
+      width: 350px;
+  
+      height:
+        99.234375px;
+    }
+  
+    .about-page
+      .home-section-index {
+      height:
+        24.953125px;
+    }
+  
+    .about-page
+      .home-section-index__number {
+      font-size: 20.8px;
+  
+      line-height:
+        24.96px;
+    }
+  
+    .about-page
+      .home-section-heading__title {
+      font-size: 44.8px;
+  
+      line-height:
+        49.28px;
+  
+      letter-spacing: -2px;
+    }
+  
     .about-hero {
-      padding-top: 120px;
+      height: 844px;
+  
+      padding: 0;
     }
   
-    .about-hero__grid {
-      grid-template-columns:
-        minmax(0, 1.35fr)
-        minmax(340px, 0.65fr);
-  
-      gap: 96px;
+    .about-hero__canvas-background {
+      background-image:
+        url(
+          "/images/framer-original/about/hero-canvas-mobile.png"
+        );
     }
   
-    .interests__grid {
-      grid-template-columns:
-        repeat(3, minmax(0, 1fr));
+    .about-hero__row {
+      position: relative;
+  
+      display: block;
+  
+      width: 390px;
+      height: 844px;
+  
+      margin: 0;
     }
   
-    .interest-card__content {
-      padding: 22px;
+    .about-hero__text {
+      display: none;
+    }
+  
+    .about-hero__media {
+      position: absolute;
+  
+      top: 197.5px;
+      left: 50%;
+  
+      display: block;
+  
+      width:
+        356.109375px;
+  
+      height: 475px;
+  
+      transform:
+        translateX(
+          -50%
+        );
+    }
+  
+    .about-hero__image {
+      width:
+        356.109375px;
+  
+      height: 475px;
+    }
+  
+    .about-shapes {
+      width: 390px;
+  
+      min-height: 1681px;
+  
+      height: auto;
+  
+      padding:
+        132px
+        20px
+        152px;
+    }
+  
+    .about-shapes
+      .about-section-container {
+      gap: 35px;
+    }
+  
+    .about-shapes__grid {
+      display: flex;
+  
+      flex-direction: column;
+  
+      gap:
+        13.421875px;
+  
+      width: 350px;
+    }
+  
+    .about-capability-wrap,
+    .about-capability {
+      width:
+        342.984375px;
+  
+      height:
+        412.046875px;
+    }
+  
+    .about-capability__top,
+    .about-capability__copy {
+      width:
+        292.984375px;
+    }
+  
+    .about-capability__title {
+      font-size: 20.8px;
+  
+      line-height:
+        24.96px;
+    }
+  
+    .about-interests {
+      display: none;
     }
   }
+
+/* ========================================
+   FINAL FONT ALIGNMENT
+   Exact original Framer mapping:
+   headings = Inter 600
+   body = Inter
+   ======================================== */
+
+.about-hero__title,
+.about-page .home-section-heading__title {
+  font-family:
+    var(--font-display);
+
+  font-weight: 600;
+}
+
+.about-hero__subtitle,
+.about-hero__body,
+.about-hero__body p,
+.about-capability__title,
+.about-capability__subtitle,
+.about-capability__description,
+.about-interest__title,
+.about-interest__description {
+  font-family:
+    var(--font-body);
+}

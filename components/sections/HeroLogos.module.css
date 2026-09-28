@@ -1,0 +1,255 @@
+/*
+ * Original Framer marquee:
+ *
+ * viewport:
+ * 500 × 76
+ *
+ * inner:
+ * 480 × 56
+ *
+ * item:
+ * 106 × 56
+ *
+ * item gap:
+ * 5px
+ *
+ * animation:
+ * translateX(0 → +970px)
+ * duration 64.6667s
+ *
+ * direction:
+ * RIGHT
+ */
+
+
+/* ========================================
+   WINDOW
+   ======================================== */
+
+   .window {
+    box-sizing: border-box;
+  
+    width: 500px;
+    height: 76px;
+  
+    padding: 10px;
+  
+    overflow: hidden;
+  }
+  
+  
+  /* ========================================
+     TRACK
+     ======================================== */
+  
+  .track {
+    position: relative;
+  
+    left: -444px;
+  
+    display: flex;
+  
+    align-items: center;
+  
+    width: max-content;
+    height: 56px;
+  
+    will-change: transform;
+  
+    animation:
+      logo-marquee-right
+      29.6s
+      linear
+      infinite;
+  }
+  
+  
+  /* ========================================
+     REPEATED SET
+     ======================================== */
+  
+  .group {
+    display: flex;
+  
+    flex: 0 0 auto;
+  
+    align-items: center;
+  
+    gap: 5px;
+  
+    /*
+     * Makes:
+     *
+     * AUTOMIND → next Baidu
+     *
+     * exactly the same spacing
+     * as every other pair.
+     */
+    padding-right: 5px;
+  }
+  
+  
+  /* ========================================
+     FIXED FRAMER ITEM
+     ======================================== */
+  
+  .slot {
+    display: flex;
+  
+    flex: 0 0 106px;
+  
+    align-items: center;
+    justify-content: center;
+  
+    width: 106px;
+    height: 56px;
+  
+    overflow: visible;
+  }
+  
+  
+  /* ========================================
+     IMAGE LOGOS
+     ======================================== */
+  
+  .logo {
+    display: block;
+  
+    flex: none;
+  
+    object-fit: contain;
+  
+    opacity: 1;
+  }
+  
+  
+  /*
+   * Original Framer Baidu:
+   * ~85.75 × 21.98
+   *
+   * Slight optical correction after
+   * screenshot comparison.
+   */
+  
+  .baidu {
+    width: 90px;
+    height: auto;
+  }
+  
+  
+  /*
+   * Original Framer Multi frame:
+   * ~86.39 × 21
+   */
+  
+  .multi {
+    width: 91px;
+    height: auto;
+  }
+  
+  
+  /* ========================================
+     INLINE AUTOARK
+     ======================================== */
+  
+  /*
+   * Original runtime element:
+   * 88 × 13
+   *
+   * Inline SVG means:
+   * - no broken icon
+   * - no delayed loading
+   * - no flashing
+   */
+  
+  .autoark {
+    display: block;
+  
+    flex: none;
+  
+    width: 88px;
+    height: 13px;
+  
+    overflow: visible;
+  }
+  
+  
+  /* ========================================
+     INLINE AUTOMIND
+     ======================================== */
+  
+  /*
+   * Original runtime element:
+   * 106 × 15
+   *
+   * The previous local SVG had internal
+   * whitespace / viewport differences,
+   * which made the visible artwork much
+   * smaller than its CSS box.
+   *
+   * This inline SVG is the original
+   * Framer vector itself.
+   */
+  
+  .automind {
+    display: block;
+  
+    flex: none;
+  
+    width: 106px;
+    height: 15px;
+  
+    overflow: visible;
+  }
+  
+  
+  /* ========================================
+     MOTION
+     ======================================== */
+  
+  @keyframes logo-marquee-right {
+    from {
+      transform:
+        translate3d(
+          0,
+          0,
+          0
+        );
+    }
+  
+    to {
+      transform:
+        translate3d(
+          444px,
+          0,
+          0
+        );
+    }
+  }
+  
+  
+  /* ========================================
+     MOBILE
+     ======================================== */
+  
+  @media (
+    max-width: 809px
+  ) {
+    .window {
+      width: 310px;
+    }
+  }
+  
+  
+  /* ========================================
+     REDUCED MOTION
+     ======================================== */
+  
+  @media (
+    prefers-reduced-motion:
+      reduce
+  ) {
+    .track {
+      animation: none;
+    }
+  }

@@ -5,7 +5,14 @@ import {
   useReducedMotion,
 } from "motion/react";
 
-import type { ReactNode } from "react";
+import {
+  useEffect,
+  useState,
+} from "react";
+
+import type {
+  ReactNode,
+} from "react";
 
 type StaggerGroupProps = {
   children: ReactNode;
@@ -23,10 +30,33 @@ export default function StaggerGroup({
   const shouldReduceMotion =
     useReducedMotion();
 
+  const [mounted, setMounted] =
+    useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  /*
+   * Default to visible content before
+   * JavaScript / Motion is ready.
+   */
+  if (!mounted) {
+    return (
+      <div className={className}>
+        {children}
+      </div>
+    );
+  }
+
   return (
     <motion.div
       className={className}
-      initial="hidden"
+      initial={
+        shouldReduceMotion
+          ? false
+          : "hidden"
+      }
       whileInView="visible"
       viewport={{
         once: true,
@@ -76,6 +106,7 @@ export function StaggerItem({
           shouldReduceMotion
             ? {
                 opacity: 1,
+                y: 0,
               }
             : {
                 opacity: 0,

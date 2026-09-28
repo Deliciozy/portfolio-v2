@@ -1,64 +1,104 @@
+import Image from "next/image";
 import Link from "next/link";
-import type { Project } from "@/data/projects";
+
+import type {
+  HomeProject,
+} from "@/data/homeProjects";
+
+import {
+  homeProjectMedia,
+} from "@/data/homeProjectMedia";
 
 type ProjectRowProps = {
-  project: Project;
+  project: HomeProject;
 };
 
 export default function ProjectRow({
   project,
 }: ProjectRowProps) {
+  const media =
+    homeProjectMedia[project.slug];
+
   return (
-    <article className="project-row">
-      <div className="project-row__media">
-        <div className="project-row__image-placeholder">
-          <span>{project.imageLabel}</span>
-        </div>
+    <article className="home-project">
+      <div className="home-project__media">
+        {media && (
+          <Image
+            src={media.src}
+            alt={media.alt}
+            fill
+            sizes="
+              (min-width: 1200px) 337px,
+              (min-width: 810px) 267px,
+              330px
+            "
+            className="home-project__image"
+          />
+        )}
       </div>
 
-      <div className="project-row__content">
-        <div>
-          <p className="project-row__marker">
-            ///
-          </p>
+      <div className="home-project__info">
+        <div className="home-project__top">
+          <div
+            className="home-project__signal"
+            aria-hidden="true"
+          >
+            <i />
+            <i />
+            <i />
+          </div>
 
-          <h3 className="project-row__title">
+          <h3 className="home-project__title">
             {project.title}
           </h3>
         </div>
 
-        <div className="project-row__content-bottom">
-          <p className="project-row__description">
+        <div className="home-project__bottom">
+          <p className="home-project__description">
             {project.description}
           </p>
 
           <Link
             href={`/projects/${project.slug}`}
-            className="project-row__button"
+            className="home-project__button"
           >
-            View case
-            <span aria-hidden="true">
+            <span>
+              View case
+            </span>
+
+            <span
+              className="home-project__button-arrow"
+              aria-hidden="true"
+            >
               →
             </span>
           </Link>
         </div>
       </div>
 
-      <div className="project-row__metrics">
-        {project.metrics.map((metric) => (
-          <div
-            className="project-row__metric"
-            key={metric.label}
-          >
-            <p className="project-row__metric-label">
-              // {metric.label}
-            </p>
+      <div className="home-project__metrics">
+        {project.metrics.map(
+          (metric) => (
+            <div
+              className="home-project__metric"
+              key={metric.label}
+            >
+              <div className="home-project__metric-label">
+                <span>
+                  //
+                </span>
 
-            <p className="project-row__metric-value">
-              {metric.value}
-            </p>
-          </div>
-        ))}
+                <p>
+                  {metric.label}
+                </p>
+              </div>
+
+              <strong>
+                {metric.value}
+              </strong>
+            </div>
+          )
+        )}
       </div>
     </article>
   );

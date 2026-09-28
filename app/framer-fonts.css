@@ -1,0 +1,574 @@
+/*
+ * ========================================
+ * EXACT FRAMER FONT BUILD
+ * ========================================
+ *
+ * These are the exact Latin font assets
+ * loaded by the original Framer website.
+ *
+ * Homepage + About:
+ *
+ * Inter 400
+ * Inter 500
+ * Inter 600
+ * Inter 700
+ * Inter 400 Italic
+ * Inter 500 Italic
+ * Inter 600 Italic
+ *
+ * Inter Display 600
+ *
+ * Inder 400
+ */
+
+
+/* ========================================
+   INTER — REGULAR 400
+   ======================================== */
+
+   @font-face {
+    font-family: "Mary Inter";
+  
+    src:
+      url(
+        "https://framerusercontent.com/assets/vQyevYAyHtARFwPqUzQGpnDs.woff2"
+      )
+      format("woff2");
+  
+    font-style: normal;
+    font-weight: 400;
+  
+    font-display: swap;
+  
+    unicode-range:
+      U+0000-00FF,
+      U+0131,
+      U+0152-0153,
+      U+02BB-02BC,
+      U+02C6,
+      U+02DA,
+      U+02DC,
+      U+2000-206F,
+      U+2074,
+      U+20AC,
+      U+2122,
+      U+2191,
+      U+2193,
+      U+2212,
+      U+2215,
+      U+FEFF,
+      U+FFFD;
+  }
+  
+  
+  /* ========================================
+     INTER — MEDIUM 500
+     ======================================== */
+  
+  @font-face {
+    font-family: "Mary Inter";
+  
+    src:
+      url(
+        "https://framerusercontent.com/assets/d3tHnaQIAeqiE5hGcRw4mmgWYU.woff2"
+      )
+      format("woff2");
+  
+    font-style: normal;
+    font-weight: 500;
+  
+    font-display: swap;
+  
+    unicode-range:
+      U+0000-00FF,
+      U+0131,
+      U+0152-0153,
+      U+02BB-02BC,
+      U+02C6,
+      U+02DA,
+      U+02DC,
+      U+2000-206F,
+      U+2074,
+      U+20AC,
+      U+2122,
+      U+2191,
+      U+2193,
+      U+2212,
+      U+2215,
+      U+FEFF,
+      U+FFFD;
+  }
+  
+  
+  /* ========================================
+     INTER — SEMIBOLD 600
+     ======================================== */
+  
+  @font-face {
+    font-family: "Mary Inter";
+  
+    src:
+      url(
+        "https://framerusercontent.com/assets/1ZFS7N918ojhhd0nQWdj3jz4w.woff2"
+      )
+      format("woff2");
+  
+    font-style: normal;
+    font-weight: 600;
+  
+    font-display: swap;
+  
+    unicode-range:
+      U+0000-00FF,
+      U+0131,
+      U+0152-0153,
+      U+02BB-02BC,
+      U+02C6,
+      U+02DA,
+      U+02DC,
+      U+2000-206F,
+      U+2074,
+      U+20AC,
+      U+2122,
+      U+2191,
+      U+2193,
+      U+2212,
+      U+2215,
+      U+FEFF,
+      U+FFFD;
+  }
+  
+  
+  /* ========================================
+     INTER — BOLD 700
+     ======================================== */
+  
+  @font-face {
+    font-family: "Mary Inter";
+  
+    src:
+      url(
+        "https://framerusercontent.com/assets/syRNPWzAMIrcJ3wIlPIP43KjQs.woff2"
+      )
+      format("woff2");
+  
+    font-style: normal;
+    font-weight: 700;
+  
+    font-display: swap;
+  
+    unicode-range:
+      U+0000-00FF,
+      U+0131,
+      U+0152-0153,
+      U+02BB-02BC,
+      U+02C6,
+      U+02DA,
+      U+02DC,
+      U+2000-206F,
+      U+2070,
+      U+2074-207E,
+      U+2080-208E,
+      U+20AC,
+      U+2122,
+      U+2191,
+      U+2193,
+      U+2212,
+      U+2215,
+      U+FEFF,
+      U+FFFD;
+  }
+  
+  
+  /* ========================================
+     INTER — REGULAR ITALIC 400
+     ======================================== */
+  
+  @font-face {
+    font-family: "Mary Inter";
+  
+    src:
+      url(
+        "https://framerusercontent.com/assets/vFzuJY0c65av44uhEKB6vyjFMg.woff2"
+      )
+      format("woff2");
+  
+    font-style: italic;
+    font-weight: 400;
+  
+    font-display: swap;
+  
+    unicode-range:
+      U+0000-00FF,
+      U+0131,
+      U+0152-0153,
+      U+02BB-02BC,
+      U+02C6,
+      U+02DA,
+      U+02DC,
+      U+2000-206F,
+      U+2074,
+      U+20AC,
+      U+2122,
+      U+2191,
+      U+2193,
+      U+2212,
+      U+2215,
+      U+FEFF,
+      U+FFFD;
+  }
+  
+  
+  /* ========================================
+     INTER — MEDIUM ITALIC 500
+     ======================================== */
+  
+  @font-face {
+    font-family: "Mary Inter";
+  
+    src:
+      url(
+        "https://framerusercontent.com/assets/ksvR4VsLksjpSwnC2fPgHRNMw.woff2"
+      )
+      format("woff2");
+  
+    font-style: italic;
+    font-weight: 500;
+  
+    font-display: swap;
+  
+    unicode-range:
+      U+0000-00FF,
+      U+0131,
+      U+0152-0153,
+      U+02BB-02BC,
+      U+02C6,
+      U+02DA,
+      U+02DC,
+      U+2000-206F,
+      U+2074,
+      U+20AC,
+      U+2122,
+      U+2191,
+      U+2193,
+      U+2212,
+      U+2215,
+      U+FEFF,
+      U+FFFD;
+  }
+  
+  
+  /* ========================================
+     INTER — SEMIBOLD ITALIC 600
+     ======================================== */
+  
+  @font-face {
+    font-family: "Mary Inter";
+  
+    src:
+      url(
+        "https://framerusercontent.com/assets/fuyXZpVvOjq8NesCOfgirHCWyg.woff2"
+      )
+      format("woff2");
+  
+    font-style: italic;
+    font-weight: 600;
+  
+    font-display: swap;
+  
+    unicode-range:
+      U+0000-00FF,
+      U+0131,
+      U+0152-0153,
+      U+02BB-02BC,
+      U+02C6,
+      U+02DA,
+      U+02DC,
+      U+2000-206F,
+      U+2074,
+      U+20AC,
+      U+2122,
+      U+2191,
+      U+2193,
+      U+2212,
+      U+2215,
+      U+FEFF,
+      U+FFFD;
+  }
+  
+  
+  /* ========================================
+     INTER DISPLAY — SEMIBOLD 600
+     Used by original // marks
+     ======================================== */
+  
+  @font-face {
+    font-family:
+      "Mary Inter Display";
+  
+    src:
+      url(
+        "https://framerusercontent.com/assets/PfdOpgzFf7N2Uye9JX7xRKYTgSc.woff2"
+      )
+      format("woff2");
+  
+    font-style: normal;
+    font-weight: 600;
+  
+    font-display: swap;
+  
+    unicode-range:
+      U+0000-00FF,
+      U+0131,
+      U+0152-0153,
+      U+02BB-02BC,
+      U+02C6,
+      U+02DA,
+      U+02DC,
+      U+2000-206F,
+      U+2070,
+      U+2074-207E,
+      U+2080-208E,
+      U+20AC,
+      U+2122,
+      U+2191,
+      U+2193,
+      U+2212,
+      U+2215,
+      U+FEFF,
+      U+FFFD;
+  }
+  
+  
+  /* ========================================
+     INDER — NAVBAR BRAND
+     Exact original Google font asset
+     ======================================== */
+  
+  @font-face {
+    font-family: "Mary Inder";
+  
+    src:
+      url(
+        "https://fonts.gstatic.com/s/inder/v15/w8gUH2YoQe8_4sq9rQ4.woff2"
+      )
+      format("woff2");
+  
+    font-style: normal;
+    font-weight: 400;
+  
+    font-display: swap;
+  
+    unicode-range:
+      U+0000-00FF,
+      U+0131,
+      U+0152-0153,
+      U+02BB-02BC,
+      U+02C6,
+      U+02DA,
+      U+02DC,
+      U+0304,
+      U+0308,
+      U+0329,
+      U+2000-206F,
+      U+20AC,
+      U+2122,
+      U+2191,
+      U+2193,
+      U+2212,
+      U+2215,
+      U+FEFF,
+      U+FFFD;
+  }
+  
+  
+  /* ========================================
+     GLOBAL FONT TOKENS
+  
+     These override the old next/font
+     variables without requiring us to
+     rewrite every component.
+     ======================================== */
+  
+  :root {
+    --font-inter:
+      "Mary Inter",
+      Arial,
+      sans-serif;
+  
+    --font-inter-display:
+      "Mary Inter Display",
+      "Mary Inter",
+      Arial,
+      sans-serif;
+  
+    --font-inder:
+      "Mary Inder",
+      Arial,
+      sans-serif;
+  
+    --font-body:
+      var(--font-inter);
+  
+    --font-display:
+      var(--font-inter);
+  
+    --font-nav:
+      var(--font-inder);
+  
+    /*
+     * Compatibility with earlier code.
+     * Anything still using the old
+     * Poppins token now receives the
+     * correct original Inter instead.
+     */
+    --font-poppins:
+      var(--font-inter);
+  
+    --font-fragment-mono:
+      var(--font-inter-display);
+  }
+  
+  
+  /* ========================================
+     PREVENT SYNTHETIC FONT STYLES
+     ======================================== */
+  
+  html,
+  body {
+    font-synthesis:
+      none;
+  }
+  
+  
+  /* ========================================
+     BODY
+     ======================================== */
+  
+  body {
+    font-family:
+      var(--font-body);
+  }
+  
+  
+  /* ========================================
+     DISPLAY / HEADINGS
+     ======================================== */
+  
+  .home-hero__title,
+  .home-section-heading__title,
+  .about-hero__title,
+  .section-title {
+    font-family:
+      var(--font-display);
+  }
+  
+  
+  /* ========================================
+     HERO EYEBROW
+  
+     Original:
+     text = Inter 600
+     //   = Inter Display 600
+     ======================================== */
+  
+  .home-hero__eyebrow-text {
+    font-family:
+      var(--font-inter);
+  }
+  
+  .home-hero__eyebrow-slash {
+    font-family:
+      var(--font-inter-display);
+  }
+  
+  
+  /* ========================================
+     SECTION INDEX
+  
+     Original:
+     01 / 03 / 05 = Inter 600
+     //             = Inter Display 600
+     ======================================== */
+  
+  .home-section-index__number {
+    font-family:
+      var(--font-inter);
+  }
+  
+  .home-section-index__slash {
+    font-family:
+      var(--font-inter-display);
+  }
+  
+  
+  /* ========================================
+     CAPABILITY CARDS
+     ======================================== */
+  
+  .home-capability__title,
+  .home-capability__subtitle,
+  .home-capability__description,
+  .about-capability__title,
+  .about-capability__subtitle,
+  .about-capability__description,
+  .capability-card__title,
+  .capability-card__subtitle,
+  .capability-card__body {
+    font-family:
+      var(--font-inter);
+  }
+  
+  
+  /* ========================================
+     PROJECTS
+     ======================================== */
+  
+  .home-project__title,
+  .home-project__description,
+  .home-project__button,
+  .home-project__metric-label,
+  .home-project__metric {
+    font-family:
+      var(--font-inter);
+  }
+  
+  
+  /* ========================================
+     REVIEWS
+     ======================================== */
+  
+  .home-review__quote,
+  .home-review__person-copy,
+  .home-team__label {
+    font-family:
+      var(--font-inter);
+  }
+  
+  
+  /* ========================================
+     ABOUT
+     ======================================== */
+  
+  .about-hero__subtitle,
+  .about-hero__body,
+  .about-interest__title,
+  .about-interest__description {
+    font-family:
+      var(--font-inter);
+  }
+  
+  
+  /* ========================================
+     NAVIGATION
+     ======================================== */
+  
+  .site-nav__brand {
+    font-family:
+      var(--font-inder);
+  }
+  
+  .site-nav__links {
+    font-family:
+      var(--font-inter);
+  }
