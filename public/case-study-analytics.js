@@ -17,14 +17,59 @@
  *
  * How the IDs get in: static files cannot read environment variables at
  * runtime, so `scripts/generate-case-study-analytics.mjs` (run automatically
- * as the npm `prebuild` hook) replaces the  and
- *  placeholders below with NEXT_PUBLIC_GA_ID and
+ * as the npm `prebuild` hook) replaces the ID placeholders in the two `var`
+ * assignments below with NEXT_PUBLIC_GA_ID and
  * NEXT_PUBLIC_CLARITY_PROJECT_ID, and writes the result to
  * public/case-study-analytics.js. The environment variables are the single
  * source of truth — never paste an ID into the generated file by hand.
  */
 (function () {
   "use strict";
+
+  // Device-level analytics opt-out (same flag as the Next.js app — these
+  // pages share this origin's localStorage). When set, e.g. via
+  // https://marychen.me/?analytics=off, the entire snippet exits here:
+  // no Clarity init, no gtag bootstrap, no view or scroll-depth events.
+  var OPT_OUT_KEY = "portfolio_analytics_opt_out";
+
+  function consumeOptOutParam() {
+    try {
+      var params = new URLSearchParams(window.location.search);
+      var mode = params.get("analytics");
+      if (mode !== "off" && mode !== "on") {
+        return;
+      }
+      if (mode === "off") {
+        window.localStorage.setItem(OPT_OUT_KEY, "true");
+      } else {
+        window.localStorage.removeItem(OPT_OUT_KEY);
+      }
+      params.delete("analytics");
+      var query = params.toString();
+      window.history.replaceState(
+        null,
+        "",
+        window.location.pathname +
+          (query ? "?" + query : "") +
+          window.location.hash
+      );
+    } catch (e) {
+      // Analytics must never break the page.
+    }
+  }
+
+  function isOptedOut() {
+    try {
+      consumeOptOutParam();
+      return window.localStorage.getItem(OPT_OUT_KEY) === "true";
+    } catch (e) {
+      return false;
+    }
+  }
+
+  if (isOptedOut()) {
+    return;
+  }
 
   // Replaced at build time from NEXT_PUBLIC_CLARITY_PROJECT_ID.
   // Empty string = Clarity disabled on the static case-study pages.

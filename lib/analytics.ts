@@ -21,6 +21,10 @@
  */
 
 import {
+  isAnalyticsOptedOut,
+} from "./analytics-opt-out";
+
+import {
   sendGAEvent,
 } from "@next/third-parties/google";
 
@@ -60,7 +64,9 @@ const clarityProjectId = process.env.NEXT_PUBLIC_CLARITY_PROJECT_ID;
 
 function canTrack(): boolean {
   return (
-    isProduction && typeof window !== "undefined"
+    isProduction &&
+    typeof window !== "undefined" &&
+    !isAnalyticsOptedOut()
   );
 }
 

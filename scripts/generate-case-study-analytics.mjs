@@ -28,9 +28,25 @@ const gaId = process.env.NEXT_PUBLIC_GA_ID ?? "";
 const clarityId = process.env.NEXT_PUBLIC_CLARITY_PROJECT_ID ?? "";
 
 const template = readFileSync(templatePath, "utf8");
-const output = template
-  .replaceAll("__GA_ID__", gaId)
-  .replaceAll("__CLARITY_PROJECT_ID__", clarityId);
+
+// Replace only the ID assignment lines (anchored on the full placeholder
+// assignment), so identical-looking text in comments is left untouched.
+function bakeId(source, varName, value) {
+  const placeholder = `var ${varName} = "__${varName}__";`;
+  if (!source.includes(placeholder)) {
+    throw new Error(`placeholder not found for ${varName}`);
+  }
+  return source.replace(
+    placeholder,
+    `var ${varName} = ${JSON.stringify(value)};`
+  );
+}
+
+const output = bakeId(
+  bakeId(template, "CLARITY_PROJECT_ID", clarityId),
+  "GA_ID",
+  gaId
+);
 
 writeFileSync(outPath, output);
 console.log(

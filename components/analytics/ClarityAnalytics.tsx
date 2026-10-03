@@ -6,6 +6,10 @@ import {
 
 import Clarity from "@microsoft/clarity";
 
+import {
+  isAnalyticsOptedOut,
+} from "@/lib/analytics-opt-out";
+
 let initialized = false;
 
 /**
@@ -22,6 +26,13 @@ export default function ClarityAnalytics() {
     }
 
     if (process.env.NODE_ENV !== "production") {
+      return;
+    }
+
+    // Never initialize or record on devices the owner excluded via
+    // ?analytics=off (AnalyticsGate already prevents mounting, this is
+    // defense in depth).
+    if (isAnalyticsOptedOut()) {
       return;
     }
 

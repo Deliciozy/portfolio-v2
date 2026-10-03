@@ -10,13 +10,11 @@ import {
   GoogleAnalytics,
 } from "@next/third-parties/google";
 
-import {
-  SpeedInsights,
-} from "@vercel/speed-insights/next";
-
+import AnalyticsGate from "@/components/analytics/AnalyticsGate";
 import AnalyticsListener from "@/components/analytics/AnalyticsListener";
 import ClarityAnalytics from "@/components/analytics/ClarityAnalytics";
 import CustomCursor from "@/components/ui/CustomCursor";
+import OptOutSpeedInsights from "@/components/analytics/OptOutSpeedInsights";
 
 import "./globals.css";
 import "./framer-fonts.css";
@@ -49,17 +47,24 @@ export default function RootLayout({
 
         {children}
 
-        {isProduction && gaId ? (
-          <GoogleAnalytics gaId={gaId} />
-        ) : null}
+        {/*
+          AnalyticsGate mounts these only after confirming this
+          browser/device did not opt out (see lib/analytics-opt-out.ts).
+          Nothing here renders anything visible.
+        */}
+        <AnalyticsGate>
+          {isProduction && gaId ? (
+            <GoogleAnalytics gaId={gaId} />
+          ) : null}
 
-        {isProduction ? (
-          <>
-            <ClarityAnalytics />
-            <AnalyticsListener />
-            <SpeedInsights />
-          </>
-        ) : null}
+          {isProduction ? (
+            <>
+              <ClarityAnalytics />
+              <AnalyticsListener />
+              <OptOutSpeedInsights />
+            </>
+          ) : null}
+        </AnalyticsGate>
       </body>
     </html>
   );
