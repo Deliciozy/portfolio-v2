@@ -9,6 +9,11 @@ import {
   homeProjectMedia,
 } from "@/data/homeProjectMedia";
 
+import {
+  AnalyticsEvents,
+  trackProps,
+} from "@/lib/analytics";
+
 type ProjectRowProps = {
   project: HomeProject;
 };
@@ -61,6 +66,13 @@ export default function ProjectRow({
           <Link
             href={`/projects/${project.slug}`}
             className="home-project__button"
+            {...trackProps(
+              AnalyticsEvents.PROJECT_CARD_CLICK,
+              {
+                project_name: project.title,
+                destination: `/projects/${project.slug}`,
+              },
+            )}
           >
             <span>
               View case

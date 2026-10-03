@@ -2,6 +2,11 @@ import Link from "next/link";
 
 import Container from "@/components/layout/Container";
 
+import {
+  AnalyticsEvents,
+  trackProps,
+} from "@/lib/analytics";
+
 export default function Footer() {
   return (
     <footer className="site-footer">
@@ -29,7 +34,16 @@ export default function Footer() {
               About me
             </Link>
 
-            <Link href="/resume.pdf">
+            <Link
+              href="/resume.pdf"
+              {...trackProps(
+                AnalyticsEvents.RESUME_CLICK,
+                {
+                  location: "footer",
+                  destination: "/resume.pdf",
+                },
+              )}
+            >
               Resume
             </Link>
           </nav>

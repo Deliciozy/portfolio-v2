@@ -1,5 +1,10 @@
 import Link from "next/link";
 
+import {
+  AnalyticsEvents,
+  trackProps,
+} from "@/lib/analytics";
+
 export default function Navbar() {
   return (
     <header className="site-nav">
@@ -23,7 +28,16 @@ export default function Navbar() {
             About me
           </Link>
 
-          <Link href="/resume">
+          <Link
+            href="/resume"
+            {...trackProps(
+              AnalyticsEvents.RESUME_CLICK,
+              {
+                location: "nav",
+                destination: "/resume",
+              },
+            )}
+          >
             Resume
           </Link>
         </nav>
